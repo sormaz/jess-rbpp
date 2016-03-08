@@ -1,0 +1,53 @@
+(bind ?*ruleFolder* "J:/user/patel/ImplannerFolder/jess-rbpp/src/")
+
+(batch (str-cat ?*ruleFolder* "rbpp.clp"))
+(batch (str-cat ?*ruleFolder* "UniversalTooldata.clp"))
+(batch (str-cat ?*ruleFolder* "Machinedata.clp"))
+(facts)
+
+(rules)
+
+(defglobal ?*part* = (new
+edu.ohiou.implanner.parts.MfgPartModel "P"
+"CarbonSteel" 10 (new
+edu.ohiou.implanner.geometry.Stock)))
+
+(assert (part
+    	(material CarbonSteel)
+    	(batch-size 1000.0)
+    	(x-dim 16)
+   		(y-dim 12)
+    	(z-dim 8)
+    	)
+)
+
+(assert (feature
+    	(name rp8)
+    	(type hole)
+    	(normal z-pos)
+    	(dim1 0.136)
+    	(dim2 3.5)
+    	(dim3 3.5)
+    	(status input)
+    	(quality 50)
+    	)
+)
+
+(assert (feature 
+  		(name simple_hole_10)
+  		(type hole) 
+  		(quality 20.0) 
+  		(tolerance 50.0) 
+  		(normal y-neg) 
+  		(slope 0) 
+  		(dim1 0.136) 
+  		(dim2 5.5) 
+  		(dim3 0) 
+  		(diam03 0) 
+  		(status input)
+  		)
+  )
+
+(agenda)
+
+(run 1)

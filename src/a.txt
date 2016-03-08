@@ -1,0 +1,150 @@
+
+
+(assert (feature
+    	(name rp8)
+    	(type pocket)
+    	(normal z-pos)
+    	(dim1 1.25)
+    	(dim2 3.5)
+    	(dim3 3.5)
+    	(status input)
+    	(quality 50)
+    	)
+)
+
+(assert (feature
+    	(name rs12)
+    	(type slot)
+    	(normal z-pos)
+    	(dim1 1.0)
+    	(dim2 1.0)
+    	(dim3 7.5)
+    	(status input)
+    	(quality 50)
+    	)
+)
+
+(assert (feature
+    	(name rs9)
+    	(type slot)
+    	(normal z-neg)
+    	(dim1 3.5)
+    	(dim2 3.0)
+    	(dim3 16)
+    	(status input)
+    	(quality 50)
+    	)
+)
+
+
+
+
+
+
+
+////////
+(assert (feature
+    	(name rs9)
+    	(type slot)
+    	(normal z-neg)
+    	(dim1 3.5)
+    	(dim2 3)
+    	(dim3 16)
+    	(status input)
+    	(quality 50)
+    	)
+)
+
+(assert (feature
+    	(name rp8)
+    	(type pocket)
+    	(normal z-pos)
+    	(dim1 1.25)
+    	(dim2 3.5)
+    	(dim3 3.5)
+    	(status input)
+    	(quality 50)
+    	)
+)
+
+(assert (feature
+    	(name rs12)
+    	(type slot)
+    	(normal z-pos)
+    	(dim1 1)
+    	(dim2 1)
+    	(dim3 7.5)
+    	(status input)
+    	(quality 50)
+    	)
+)
+
+(import edu.ohiou.implanner.processes.*)
+(import edu.ohiou.labimp.draw.*)
+(bind ?emp (new EndMillingPeripheral))
+(?emp setApplet (new AnimApplet ?emp))
+(?emp display)
+
+////
+(batch sfeat-smach-stool.clp)
+
+(import edu.ohiou.implanner.parts.*)
+(import edu.ohiou.implanner.geometry.*)
+
+(bind ?pm (new MfgPartModel (new PartModel 
+"J:\\user\\UG Examples\\UGMOdels_NArender\\Scfdemo\\Scfdemo04_modeling.prt")
+(new PartModel 
+"J:\\user\\UG Examples\\UGMOdels_NArender\\Scfdemo\\Scfdemo04_stock.prt") "part" 50))
+
+(bind ?t (new Test))
+
+(bind ?f ((?pm getFeatureList) get 0))
+
+(?t makeFactString (engine) ?f)
+
+////f-6   (MAIN::feature (name "COUNTER_SUNK_HOLE(21)") (type "hole") (quality 20.0) (tolerance 50.0) (normal z-pos) (slope 0) (dim1 1.5) (dim2 -0.0) (dim3 0) (diam03 0) (status input))
+////
+
+; defglobal ?*part* mfgpartmodel
+
+(deffunction makeMfgProcess (?operation)
+
+(new EndMillingPeripheral (?*part findFeatureForName (slotValue ?operation feature))
+// set feature
+// set stock
+// set cutting parameters
+// set tool
+
+/////CG_07/29
+
+defglobal ?*part* mfgpartmodel
+
+(deffunction makeEmpProcess (?operation)
+(bind ?emp new EndMillingPeripheral)
+// set Feature
+(?emp setFeature (?*part* findFeatureForName (slotValue ?operation feature))
+// set Stock
+(?emp setStock (?*part* getStock))
+// set Cutting parameters
+(bind ?cc (slotValue ?operation cut)
+(bind ?cp new CuttingParameter(
+(slotValue ?cc process)
+(slotValue ?cc part-material)
+(slotValue ?cc tool-material)
+(slotValue ?cc tool-diameter)
+(slotValue ?cc speed)
+(slotValue ?cc feed))
+(?emp setCuttingParameter ?cp)
+//
+(?emp setTool (slotValue ?operation tool))
+
+// Make a rule which calls this function if operation is endMillingPeripheral 
+& status is complete
+
+
+(import edu.ohiou.implanner.parts.*)
+
+(bind ?ip (new IntegrationPanel (engine)))
+
+(?ip display)
+

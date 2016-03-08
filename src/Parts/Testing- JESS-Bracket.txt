@@ -1,0 +1,202 @@
+(bind ?*ruleFolder* "J:/user/patel/ImplannerFolder/jess-rbpp/src/")
+
+(batch (str-cat ?*ruleFolder* "rbpp.clp"))
+
+(facts)
+
+(rules)
+
+(defglobal ?*part* = (new
+edu.ohiou.implanner.parts.MfgPartModel "P"
+"CarbonSteel" 10 (new
+edu.ohiou.implanner.geometry.Stock)))
+
+
+
+
+(assert (part 
+		(material Aluminum) 
+		(x-dim 20.0) 
+		(y-dim 5.0) 
+		(z-dim 10.0) 
+		(quality 20.0) 
+		(batch-size 50)
+		)
+)
+
+;;;;;;used "aes94_alu_mdata.clp" "aes94_mdata.clp"
+	
+;;;;;;; 1 simple hole ( setup y-pos, no. 5) ;;;;;;;; ---------runs good with all the operation time ;;;;;
+
+(assert (feature 
+ 		(name simple_hole_11)
+  		(type hole) 
+  		(quality 20.0) 
+  		(tolerance 50.0) 
+  		(normal y-pos) 
+  		(slope 0) 
+  		(dim1 1.0) 
+  		(dim2 5.0) 
+  		(dim3 0) 
+  		(diam03 0) 
+  		(status input)
+  		)
+  )
+
+;;;;;;; 2 simple hole ( setup Z-neg, no. 2) ;;;;;;;; ---------runs good with all the operation time ;;;;;
+
+
+(assert (feature 
+ 		(name simple_hole_21)
+  		(type hole) 
+  		(quality 20.0) 
+  		(tolerance 50.0) 
+  		(normal z-neg) 
+  		(slope 0) 
+  		(dim1 1.0) 
+  		(dim2 5) 
+  		(dim3 0) 
+  		(diam03 0) 
+  		(status input)
+  		)
+  )
+
+
+;;;;;;; 2 simple hole ( setup Z-neg, no. 1) ;;;;;;;; ---------runs good with all the operation time ;;;;;
+
+
+(assert (feature 
+ 		(name simple_hole_22)
+  		(type hole) 
+  		(quality 20.0) 
+  		(tolerance 50.0) 
+  		(normal z-neg) 
+  		(slope 0) 
+  		(dim1 1.5) 
+  		(dim2 5) 
+  		(dim3 0) 
+  		(diam03 0) 
+  		(status input)
+  		)
+  )
+
+
+;;;;;;; 3 Rectangular slot ( setup Z-neg, no. 2) ;;;;;;;; ---------runs good with the operation time but not with setup time toolchange etc ;;;;;
+
+
+
+(assert (feature 
+  		(name rectangular_slot_1) 
+  		(type slot) 
+  		(quality 20.0) 
+  		(tolerance 50.0) 
+  		(normal z-neg) 
+  		(slope 0) 
+  		(dim1 2.0) 
+  		(dim2 2.5) 
+  		(dim3 5.0) 
+  		(diam03 0) 
+  		(status input)
+  		)
+  )	
+
+
+;;;;;;; 4 Rectangular slot ( setup Z-neg, no. 2) ;;;;;;;; ---------runs good with the operation time but not with setup time toolchange etc ;;;;;
+
+
+(assert (feature 
+  		(name rectangular_slot_2) 
+  		(type slot) 
+  		(quality 20.0) 
+  		(tolerance 50.0) 
+  		(normal z-neg) 
+  		(slope 0) 
+  		(dim1 3.5) 
+  		(dim2 5.0) 
+  		(dim3 5.0) 
+  		(diam03 0) 
+  		(status input)
+  		)
+  )	
+
+
+
+;;;;;;; 5 Rectangular slot ( setup Z-neg, no. 1) ;;;;;;;; ---------runs good with the operation time but not with setup time toolchange etc ;;;;;
+
+
+(assert (feature 
+  		(name rectangular_slot_3) 
+  		(type slot) 
+  		(quality 20.0) 
+  		(tolerance 50.0) 
+  		(normal z-neg) 
+  		(slope 0) 
+  		(dim1 3) 
+  		(dim2 5.0) 
+  		(dim3 5.0) 
+  		(diam03 0) 
+  		(status input)
+  		)
+  )	
+
+
+
+
+
+;;;;;;; 6 Rectangular pocket ( setup Z-neg, no. 1) ;;;;;;;; ---------runs good with all the operation time ;;;;;
+
+
+
+(assert (feature 
+		(name rectangular_pocket_1)
+		(type pocket)
+		(quality 20.0)
+		(tolerance 50.0)
+		(normal z-neg) 
+		(slope 0) 
+		(dim1 2.0) 
+		(dim2 1.0)
+		(dim3 4.0)
+		(diam03 0)
+		(status input)
+		)
+)
+
+
+
+;;;;;;; 7 Rectangular pocket ( setup Y-neg, no. 1) ;;;;;;;; ---------runs good with all the operation time ;;;;;
+
+
+(assert (feature 
+		(name rectangular_pocket_2)
+		(type pocket)
+		(quality 20.0)
+		(tolerance 50.0)
+		(normal Y-neg) 
+		(slope 0) 
+		(dim1 3.5) 
+		(dim2 2.0)
+		(dim3 8.0)
+		(diam03 0)
+		(status input)
+		)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
