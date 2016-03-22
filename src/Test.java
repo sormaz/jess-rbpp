@@ -1,8 +1,10 @@
 
-import edu.ohiou.implanner.features.*;
-import edu.ohiou.labimp.gtk3d.*;
+import edu.ohiou.mfgresearch.implanner.features.Hole;
+import edu.ohiou.mfgresearch.implanner.features.Pocket;
+import edu.ohiou.mfgresearch.implanner.features.Slot;
+import edu.ohiou.mfgresearch.implanner.parts.MfgPartModel;
+import edu.ohiou.mfgresearch.labimp.gtk3d.LineSegment;
 import jess.*;
-import edu.ohiou.implanner.parts.*;
 public class Test {
 
 	public static void makeFact(Rete rete, Hole aHole)

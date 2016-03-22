@@ -6,7 +6,7 @@
 
 (defrule topface1.rough.big
 	?f <- (feature (name ?f1)
-		(type topface) (status input) (quality ?quality&:(> 30 ?quality 100) ) (dim2 ?dim2&:(> ?dim2 8) ) )             
+		(type slab) (status input) (quality ?quality&:(> 30 ?quality 100) ) (dim2 ?dim2&:(> ?dim2 8) ) )             
 	=>
 	(modify ?f (status process))
 	(assert (operation (feature ?f1) (process face-milling) (cut single) (options or) 
@@ -23,7 +23,7 @@
 
 (defrule topface2.fine.big
 	?f <- (feature (name ?f1)
-		(type topface) (status input) (quality ?quality&:(<= ?quality 30) ) (dim2 ?dim2&:(> ?dim2 8) ) )
+		(type slab) (status input) (quality ?quality&:(<= ?quality 30) ) (dim2 ?dim2&:(> ?dim2 8) ) )
      =>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process face-milling) (cut double) (options or)
@@ -35,7 +35,7 @@
 			
 (defrule topface3.rough.medium
 	?f <- (feature (name ?f1)
-		(type topface) (status input) (quality ?quality&:(<= ?quality 100 ) ) (dim2 ?dim2&:(<= ?dim2 8) ) )
+		(type slab) (status input) (quality ?quality&:(<= ?quality 100 ) ) (dim2 ?dim2&:(<= ?dim2 8) ) )
 	=>
 	(modify ?f (status process))
 	(assert (operation (feature ?f1) (process face-milling) (cut single) (options or)
@@ -51,7 +51,7 @@
 			
 (defrule topface4.fine.medium
 	?f <- (feature (name ?f1)
-		(type topface) (status input) (quality ?quality&:(<= ?quality 30 ) ) (dim2 ?dim2&:(> ?dim2 8) ) )
+		(type slab) (status input) (quality ?quality&:(<= ?quality 30 ) ) (dim2 ?dim2&:(> ?dim2 8) ) )
 	=>	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process face-milling) (cut double) (options or)
 		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
@@ -64,7 +64,7 @@
 		
 (defrule topface5.rough.small
 	?f <- (feature (name ?f1)
-		(type topface) (status input) (quality ?quality&:(<= ?quality 100) ) (dim2 ?dim2&:(<= ?dim2 2) ) )
+		(type slab) (status input) (quality ?quality&:(<= ?quality 100) ) (dim2 ?dim2&:(<= ?dim2 2) ) )
 	=>
 	(modify ?f (status process))
 	(assert (operation (feature ?f1) (process end-milling-peripheral) (cut single) (options or)
@@ -88,7 +88,7 @@
 
 (defrule topface6.fine.medium
 	?f <- (feature (name ?f1 )
-		(type topface) (status input) (quality ?quality&: (<= ?quality 30) ) (dim2 ?dim2&: (<= ?dim2 2) ) )
+		(type slab) (status input) (quality ?quality&: (<= ?quality 30) ) (dim2 ?dim2&: (<= ?dim2 2) ) )
 	=>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process end-milling-slotting) (cut double) (options or)

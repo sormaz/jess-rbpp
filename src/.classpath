@@ -2,6 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path=""/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/jess2"/>
+	<classpathentry kind="lib" path="C:/java-lib/jess/jess.jar"/>
+	<classpathentry kind="lib" path="C:/java-lib/jess/jsr94.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/implanner"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/labimp.basis"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/labimp.extend"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/labimp.graph"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
