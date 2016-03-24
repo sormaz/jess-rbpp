@@ -119,6 +119,17 @@
 	(cost 40.000))
 )
 
+(assert (tool                                   ;added by mayur
+	(name T430)
+	(material hss)
+	(for-process end-milling-slotting)
+	(diameter 0.1)
+        (length 3.0)
+	(number-of-teeth 4)
+	(life-cycle 240)
+	(cost 40.000))
+)
+
 (assert (tool
 	(name T510)
 	(material carbide)
