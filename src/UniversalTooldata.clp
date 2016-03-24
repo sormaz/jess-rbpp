@@ -369,6 +369,17 @@
 	(cost 40.000))
 )
 
+(assert (tool
+	(name T431)
+	(material Hss)
+	(for-process side-milling)
+	(diameter 0.2)
+        (width 0.625)
+	(length 10.0)
+	(life-cycle 180)
+	(cost 30.000))
+)
+
 
 (assert (tool
 	(name T202)
@@ -639,6 +650,15 @@
 		(part-material CarbonSteel)
 		(tool-material Hss)
 		(tool-diameter 5.0)
+		(speed 60)
+		(feed 0.007)
+        ))
+
+(assert (cutting-condition 	
+    	(process side-milling)
+		(part-material CarbonSteel)
+		(tool-material Hss)
+		(tool-diameter 0.2)
 		(speed 60)
 		(feed 0.007)
         ))
