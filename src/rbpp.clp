@@ -31,4 +31,7 @@
 ;(batch (str-cat ?*ruleFolder* "UniversalTooldata.clp"))
 ;(batch (str-cat ?*ruleFolder* "Machinedata.clp"))
 
+;(bind ?ip (new edu.ohiou.mfgresearch.implanner.parts.IntegrationPanel (engine))) (?ip display)
+
+
 ;(run)
