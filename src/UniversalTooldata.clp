@@ -358,6 +358,17 @@
 	(cost 30.000))
 )
 
+(assert (tool                                   ;added by mayur for Slider slot
+	(name T430)
+	(material hss)
+	(for-process end-milling-slotting)
+	(diameter 0.2)
+        (length 3.0)
+	(number-of-teeth 4)
+	(life-cycle 240)
+	(cost 40.000))
+)
+
 
 (assert (tool
 	(name T202)
@@ -580,6 +591,15 @@
 		(part-material CarbonSteel)
 		(tool-material Hss)
 		(tool-diameter 0.625)
+		(speed 70)
+		(feed 0.006)
+        ))
+
+(assert (cutting-condition 	
+    	(process end-milling-slotting)
+		(part-material CarbonSteel)
+		(tool-material Hss)
+		(tool-diameter 0.2)
 		(speed 70)
 		(feed 0.006)
         ))
