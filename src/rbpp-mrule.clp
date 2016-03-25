@@ -41,7 +41,7 @@
     (?emp setStock (?*part* getStock))
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
-    (?emp setProcessTime ?t)
+    ;(?emp setProcessTime ?t)
     (?emp setCuttingParameter)
 )
 
@@ -71,7 +71,7 @@
     (?emp settFeature (?*part* getFeatureForName ?f1))
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
-    (?emp setProcessTime ?t)
+    ;(?emp setProcessTime ?t)                                ;commented by mayur 3/24/2016 (reason: time not needed for setup planning)
     ;(printout t ?t1 " tool dia " ?d1 " length " ?length " material " ?m1 crlf)
     (?emp setCuttingParameter)
 )
@@ -104,7 +104,7 @@
      (?emp setTool ?tool)
     (?emp setMachine ?mach)
     (?emp setProcessTime ?t)
-   ; (?emp setTool (new Tool ?t1 ?d1 ?length ?m1))
+   (?emp setTool (new Tool ?t1 ?d1 ?length ?m1))
     (?emp setCuttingParameter)
 )
 (defrule emsm-complete
