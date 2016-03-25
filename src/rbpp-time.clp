@@ -14,6 +14,7 @@
 	(bind ?number-of-teeth (nth$ 6 $?factors) )
 	(bind ?fwidth (nth$ 7 $?factors) )
 	(bind ?twidth (nth$ 8 $?factors) )
+    (printout t "ans is" ?length ?diameter ?speed ?feed ?efficiency ?number-of-teeth ?fwidth ?twidth crlf)
 	
 	(if (eq nil ?number-of-teeth) then
 		(bind ?number-of-teeth 1) )
