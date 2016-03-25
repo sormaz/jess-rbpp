@@ -373,8 +373,8 @@
 	(name T431)
 	(material Hss)
 	(for-process side-milling)
-	(diameter 0.2)
-        (width 0.625)
+	(diameter 4)
+        (width 0.2)
 	(length 10.0)
 	(life-cycle 180)
 	(cost 30.000))
@@ -610,9 +610,19 @@
     	(process end-milling-slotting)
 		(part-material CarbonSteel)
 		(tool-material Hss)
-		(tool-diameter 0.2)
+		(tool-diameter 4)
 		(speed 70)
 		(feed 0.006)
+        ))
+
+
+(assert (cutting-condition 	
+    	(process side-milling)
+		(part-material CarbonSteel)
+		(tool-material Hss)
+		(tool-diameter 0.2)
+		(speed 60)
+		(feed 0.007)
         ))
 
 (assert (cutting-condition 	
@@ -650,15 +660,6 @@
 		(part-material CarbonSteel)
 		(tool-material Hss)
 		(tool-diameter 5.0)
-		(speed 60)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process side-milling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.2)
 		(speed 60)
 		(feed 0.007)
         ))
