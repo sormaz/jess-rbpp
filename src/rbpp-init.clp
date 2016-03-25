@@ -16,8 +16,8 @@
 	(slot diam03 (default 0))
     (slot object) ; to store a reference to jave object corresponding to the fact
 	(slot status)
-    (multislot next)
-    (multislot previous)
+    (multislot nextFPN)
+    (multislot previousFPN)
 )
 			
 (deftemplate perpendicular
