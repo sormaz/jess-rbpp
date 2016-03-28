@@ -189,4 +189,37 @@
 	(printout t "machine: " ?m " -> " ?n crlf)
 	)
 ;(new Tool ?t1 ?d1 ?length ?m1)
+
+(defrule emslm-complete-connected                  ;slab milling //mayur
+    (feature (name ?f1) (status ?ordered)(object ?f&~nil))
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process slab-milling) (op-time ?t) )
+    (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
+    (machine (name ?m)(imp-machine ?mach&~nil))
+    =>
+    (bind ?emp (new SlabMilling))
+    (?emp settFeature (?*part* getFeatureForName ?f1))
+    (?emp setStock (?*part* getStock))
+     (?emp setTool ?tool)
+    (?emp setMachine ?mach)
+    (?emp setProcessTime ?t)
+   (?emp setTool (new Tool ?t1 ?d1 ?length ?m1))
+    (?emp setCuttingParameter)
+)
+
+(defrule emslm-complete                      ; slab milling //mayur
+    (feature (name ?f1) (status ?ordered)(object nil))
+    (part (material ?mat))
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process slab-milling) (op-time ?t) )
+    (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
+    (machine (name ?m)(imp-machine ?mach&~nil))
+    =>
+    (bind ?emp (new SlabMilling))
+    (?emp setFeatureName ?f1)
+     (?emp setToolName ?t1)
+    (?emp setMachineName ?m)
+    (?emp setProcessTime ?t)
+    (?emp setCuttingParameter ?mat ?m1 ?d1)
+)
+
+
 (provide rbpp-mrule)
