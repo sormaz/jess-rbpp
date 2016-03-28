@@ -1891,5 +1891,46 @@
 		(feed 0.009)
         ))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Top Surface  //created by Mayur   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(assert (tool
+	(name T801)                       ;tool 801 for slab milling //mayur
+	(material Carbide)
+	(for-process slab-milling)
+	(diameter 2.0)
+	(length 5.0)
+	(life-cycle 240)
+	(cost 25.000))
+)
+
+(assert (cutting-condition 	
+    	(process slab-milling)
+		(part-material CarbonSteel)
+		(tool-material Carbide)
+		(tool-diameter 2.0)
+		(speed 375)
+		(feed 0.007)
+        ))
+
+(assert (tool
+	(name T802)
+	(material Carbide)
+	(for-process slab-milling)
+	(diameter 10.0)
+        (width 5.0)
+	(life-cycle 180)
+	(cost 30.000))
+)
+
+(assert (cutting-condition 	
+    	(process slab-milling)
+		(part-material CarbonSteel)
+		(tool-material Carbide)
+		(tool-diameter 10.0)
+		(speed 375)
+		(feed 0.008)
+        ))
+
+
 ;(provide aes94_mdata)
 
