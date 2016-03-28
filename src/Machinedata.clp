@@ -57,7 +57,7 @@
 	(tool-change-time 40)
 	(unit-cost 1.3)
     (tool-list T601 T603 T605 T607 T609 T611 
-               T613 T615 T617 T619 T701 T702 T703 T704 TC600 T410 T420 T430)
+               T613 T615 T617 T619 T701 T702 T703 T704 TC600 T410 T420 T430 T801 T802)
 ))
 
 (assert (process 
@@ -72,6 +72,11 @@
 
 (assert (process 
     (name end-milling-slotting)
+    (machine CncVMillFast))
+)
+
+(assert (process 
+    (name slab-milling)
     (machine CncVMillFast))
 )
 
