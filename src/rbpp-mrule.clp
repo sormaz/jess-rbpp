@@ -38,6 +38,7 @@
     =>
     (bind ?emp (new EndMillingPeripheral))
     (?emp settFeature (?*part* getFeatureForName ?f1))
+    (?emp setName (str-cat end-milling-peripheral- ?f1))   ;concatenate process and last 4 chara of feature name  //mayur
     (?emp setStock (?*part* getStock))
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
@@ -69,6 +70,7 @@
     =>
     (bind ?emp (new EndMillingSlotting))
     (?emp settFeature (?*part* getFeatureForName ?f1))
+    (?emp setName (str-cat end-milling-slotting- ?f1))
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
     ;(?emp setProcessTime ?t)                                ;commented by mayur 3/24/2016 (reason: time not needed for setup planning)
@@ -100,6 +102,7 @@
     =>
     (bind ?emp (new SideMilling))
     (?emp settFeature (?*part* getFeatureForName ?f1))
+    (?emp setName (str-cat side-milling- ?f1))
     (?emp setStock (?*part* getStock))
      (?emp setTool ?tool)
     (?emp setMachine ?mach)
@@ -131,6 +134,7 @@
     =>
     (bind ?emp (new TwistDrilling))
     (?emp settFeature (?*part* getFeatureForName ?f1))
+    (?emp setName (str-cat drilling- ?f1))
     (?emp setStock (?*part* getStock))
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
@@ -160,6 +164,7 @@
     =>
     (bind ?emp (new EndMillingPeripheral))
     (?emp settFeature (?*part* getFeatureForName ?f1))
+    (?emp setName (str-cat chamfer-end-milling- ?f1))
     (?emp setStock (?*part* getStock))
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
@@ -198,6 +203,7 @@
     =>
     (bind ?emp (new SlabMilling))
     (?emp settFeature (?*part* getFeatureForName ?f1))
+    (?emp setName (str-cat slab-milling- ?f1))
     (?emp setStock (?*part* getStock))
      (?emp setTool ?tool)
     (?emp setMachine ?mach)
