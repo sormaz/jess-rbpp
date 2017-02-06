@@ -1,0 +1,1 @@
+(batch  (str-cat ?*ruleFolder* "rbpp.clp"))
