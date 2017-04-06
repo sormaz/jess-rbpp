@@ -31,7 +31,7 @@
  
 (defrule emp-complete-connected
     (feature (name ?f1) (status ?ordered) (object ?f&~nil))
-    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m) (process end-milling-peripheral)(op-time ?t) )
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m) (process end-milling-peripheral) (op-time ?t) (cost ?c))
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil))
     
@@ -42,14 +42,15 @@
     (?emp setStock (?*part* getStock))
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
-    ;(?emp setProcessTime ?t)
+    (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
     (?emp setCuttingParameter)
 )
 
 (defrule emp-complete
     (feature (name ?f1) (status ?ordered) (object nil))
     (part (material ?mat))
-    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m) (process end-milling-peripheral)(op-time ?t) )
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m) (process end-milling-peripheral)(op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil))
     
@@ -59,12 +60,13 @@
     (?emp setToolName ?t1 )
     (?emp setMachineName ?m)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
     (?emp setCuttingParameter ?mat ?m1 ?d1)
 )
 
 (defrule ems-complete-connected
     (feature (name ?f1) (status ?ordered)(object ?f&~nil))
-    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process end-milling-slotting) (op-time ?t) )
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process end-milling-slotting) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil))
     =>
@@ -73,7 +75,8 @@
     (?emp setName (str-cat end-milling-slotting- ?f1))
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
-    ;(?emp setProcessTime ?t)                                ;commented by mayur 3/24/2016 (reason: time not needed for setup planning)
+    (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)                                ;commented by mayur 3/24/2016 (reason: time not needed for setup planning)
     ;(printout t ?t1 " tool dia " ?d1 " length " ?length " material " ?m1 crlf)
     (?emp setCuttingParameter)
 )
@@ -81,7 +84,7 @@
 (defrule ems-complete
     (feature (name ?f1) (status ?ordered)(object nil))
     (part (material ?mat))
-    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process end-milling-slotting) (op-time ?t) )
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process end-milling-slotting) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil))
     =>
@@ -90,13 +93,14 @@
     (?emp setToolName ?t1)
     (?emp setMachineName ?m)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
     ;(printout t ?t1 " tool dia " ?d1 " length " ?length " material " ?m1 crlf)
     (?emp setCuttingParameter ?mat ?m1 ?d1)
 )
 
 (defrule emsm-complete-connected
     (feature (name ?f1) (status ?ordered)(object ?f&~nil))
-    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process side-milling) (op-time ?t) )
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process side-milling) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil))
     =>
@@ -107,13 +111,14 @@
      (?emp setTool ?tool)
     (?emp setMachine ?mach)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
    (?emp setTool (new Tool ?t1 ?d1 ?length ?m1))
     (?emp setCuttingParameter)
 )
 (defrule emsm-complete
     (feature (name ?f1) (status ?ordered)(object nil))
     (part (material ?mat))
-    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process side-milling) (op-time ?t) )
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process side-milling) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil))
     =>
@@ -122,13 +127,14 @@
      (?emp setToolName ?t1)
     (?emp setMachineName ?m)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
     (?emp setCuttingParameter ?mat ?m1 ?d1)
 )
 
 
 (defrule drilling-complete-connected
     (feature (name ?f1) (status ?ordered)(object ?f&~nil))
-     ?op <- (operation (machine ?m)(feature ?f1) (tool ?t1) (process drilling) (op-time ?t) )
+     ?op <- (operation (machine ?m)(feature ?f1) (tool ?t1) (process drilling) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil)(tool-list $?tools&: (member$ ?t1 $?tools)))
     =>
@@ -139,13 +145,14 @@
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
     (?emp setCuttingParameter)
 )
 
 (defrule drilling-complete
     (feature (name ?f1) (status ?ordered)(object nil))
     (part (material ?mat))
-     ?op <- (operation (machine ?m)(feature ?f1) (tool ?t1) (process drilling) (op-time ?t) )
+     ?op <- (operation (machine ?m)(feature ?f1) (tool ?t1) (process drilling) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil)(tool-list $?tools&: (member$ ?t1 $?tools)))
     =>
@@ -154,11 +161,12 @@
     (?emp setToolName ?t1)
     (?emp setMachineName ?m)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
     (?emp setCuttingParameter ?mat ?m1 ?d1)
 )
 (defrule chamfer-complete-connected
     (feature (name ?f1) (object ?f&~nil))
-     ?op <- (operation (machine ?m) (feature ?f1) (tool ?t1) (process chamfer-end-milling) (op-time ?t) )
+     ?op <- (operation (machine ?m) (feature ?f1) (tool ?t1) (process chamfer-end-milling) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil)(tool-list $?tools&: (member$ ?t1 $?tools)))
     =>
@@ -169,13 +177,14 @@
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
     (?emp setCuttingParameter)
 )
 
 (defrule chamfer-complete
     (feature (name ?f1) (object nil))
     (part (material ?mat))
-     ?op <- (operation (machine ?m) (feature ?f1) (tool ?t1) (process chamfer-end-milling) (op-time ?t) )
+     ?op <- (operation (machine ?m) (feature ?f1) (tool ?t1) (process chamfer-end-milling) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil)(tool-list $?tools&: (member$ ?t1 $?tools)))
     =>
@@ -184,6 +193,7 @@
     (?emp setToolName ?t1)
     (?emp setMachineName ?m)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
     (?emp setCuttingParameter ?mat ?m1 ?d1)
 )
 
@@ -197,7 +207,7 @@
 
 (defrule emslm-complete-connected                  ;slab milling //mayur
     (feature (name ?f1) (status ?ordered)(object ?f&~nil))
-    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process slab-milling) (op-time ?t) )
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process slab-milling) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil))
     =>
@@ -208,6 +218,7 @@
      (?emp setTool ?tool)
     (?emp setMachine ?mach)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
    (?emp setTool (new Tool ?t1 ?d1 ?length ?m1))
     (?emp setCuttingParameter)
 )
@@ -215,7 +226,7 @@
 (defrule emslm-complete                      ; slab milling //mayur
     (feature (name ?f1) (status ?ordered)(object nil))
     (part (material ?mat))
-    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process slab-milling) (op-time ?t) )
+    ?op <- (operation (feature ?f1) (tool ?t1) (machine ?m)(process slab-milling) (op-time ?t) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil))
     =>
@@ -224,6 +235,7 @@
      (?emp setToolName ?t1)
     (?emp setMachineName ?m)
     (?emp setProcessTime ?t)
+    (?emp setProcessCost ?c)
     (?emp setCuttingParameter ?mat ?m1 ?d1)
 )
 

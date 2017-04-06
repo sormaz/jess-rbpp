@@ -151,6 +151,8 @@
 	(cutting-condition (process end-milling-slotting) (part-material ?mat) (tool-material ?tmat) (tool-diameter ?tdia) (speed ?speed) (feed ?feed) )
 	 =>
 	 (bind ?nopass (/ ?fdepth 0.25) )
+    (bind ?parms (create$ ?length ?tdia ?speed ?feed ?eff ?nteeth ?fdepth 0.25))
+    (printout WSTDOUT " in slot time rule " ?m1 ?t1 ?parms crlf)
 	 (modify ?op (op-time (calculate-mach-time (create$ ?length ?tdia ?speed ?feed ?eff ?nteeth ?fdepth 0.25) ) ) )
 )
 
