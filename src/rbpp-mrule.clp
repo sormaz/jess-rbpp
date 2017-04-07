@@ -16,9 +16,10 @@
 ;)
 
 (defrule make-IMP-tool 
-     ?t<- (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool nil))
+     ?t<- (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool nil) (number-of-teeth ?nt))
     =>
     (bind ?tool (new Tool ?t1 ?d1 ?length ?m1))
+    (?tool setNoTeeths ?nt)
     (modify ?t (imp-tool ?tool))
     )
 
