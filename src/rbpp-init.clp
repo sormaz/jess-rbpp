@@ -117,7 +117,7 @@
 	(slot diameter)
 	(slot width)
 	(slot length (default 0.0))
-	(slot number-of-teeth)
+	(slot number-of-teeth (default 1))
 	(slot life-cycle)
 	(slot cost)
     (slot imp-tool)
