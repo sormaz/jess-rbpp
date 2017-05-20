@@ -115,7 +115,7 @@
 (deffunction createHoleFact (?oldHole ?process)
      (bind ?className (call edu.ohiou.mfgresearch.implanner.processes.TokenizeName getLastToken ?process ".") )
      (bind ?fName  (fact-slot-value ?oldHole featureName) )
-     (bind ?nFObj (new DelphiHole (str-cat (sub-string 1 5 ?className) "-" ?fName ) 
+     (bind ?nFObj (new Hole (str-cat (sub-string 1 5 ?className) "-" ?fName ) 
                             (fact-slot-value ?oldHole radius )
                             (fact-slot-value ?oldHole axis)
                             (fact-slot-value ?oldHole axisPoint) 
