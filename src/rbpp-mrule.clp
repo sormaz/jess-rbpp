@@ -135,7 +135,7 @@
 
 (defrule drilling-complete-connected
     (feature (name ?f1) (status ?ordered)(object ?f&~nil))
-     ?op <- (operation (machine ?m)(feature ?f1) (tool ?t1) (process drilling) (op-time ?t) (cost ?c) )
+     ?op <- (operation (machine ?m)(feature ?f1) (tool ?t1) (process drilling) (op-time ?t&~nil) (cost ?c) )
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil)(tool-list $?tools&: (member$ ?t1 $?tools)))
     =>
