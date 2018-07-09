@@ -18,6 +18,7 @@
 (defclass Holemaking edu.ohiou.mfgresearch.implanner.processes.Holemaking)
 
 (defclass Hole edu.ohiou.mfgresearch.implanner.features.Hole)
+(defclass Slot edu.ohiou.mfgresearch.implanner.features.Slot)
 ;(defclass Hole edu.ohiou.mfgresearch.implanner.delphi.DelphiHole)
 
 
