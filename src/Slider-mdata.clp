@@ -15,6 +15,7 @@
 	(speed-efficiency 1.0)
 	(tool-change-time 40)
 	(unit-cost 1.3))
+	(tool-list T460 T520 T530 T540 T550 T560 T410 T420 T320  T620 T630 T1400)
 )
 
 
