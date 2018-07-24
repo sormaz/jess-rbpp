@@ -15,10 +15,11 @@
 ;(defclass Boring edu.ohiou.mfgresearch.implanner.processes.Boring)
 ;(defclass Reaming edu.ohiou.mfgresearch.implanner.processes.Reaming)
 
-(defclass Holemaking edu.ohiou.mfgresearch.implanner.processes.Holemaking)
+(defclass MfgProcess edu.ohiou.mfgresearch.implanner.processes.MfgProcess)
 
-(defclass Hole edu.ohiou.mfgresearch.implanner.features.Hole)
-(defclass Slot edu.ohiou.mfgresearch.implanner.features.Slot)
+(defclass MfgFeature edu.ohiou.mfgresearch.implanner.features.MfgFeature)
+;(defclass Hole edu.ohiou.mfgresearch.implanner.features.Hole)
+;(defclass Slot edu.ohiou.mfgresearch.implanner.features.Slot)
 ;(defclass Hole edu.ohiou.mfgresearch.implanner.delphi.DelphiHole)
 
 

@@ -16,6 +16,9 @@
       (bind ?LTDia (?pcTable get largestToolDiameter) )
       (bind ?STDia (?pcTable get "smallestToolDiameter"))
       
+      ; verify for holes
+      (if ((fact-slot-value ?FeatureFact OBJECT) isHole)
+      then
       (if (and (numberp ?LTDia) (numberp ?STDia) )
       then
          (if  (and (<= (* 2.0 (?Feature getRadius)) ?LTDia)
@@ -49,7 +52,12 @@
               (return  -1)
           )
       )
+                    (bind ?dia (* (?Feature getRadius) 2.0))
+              (bind ?depth (?Feature getBottomDist ))
    )
+   else ; it is not a hole
+   )
+   ; end verify for holes
       (bind ?toBeSatisfied (?hash size))
 
     (while (?itr hasNext)
@@ -78,8 +86,7 @@
                   (?newFeatPropTable put ?string (?propTable get ?string))
                )
            else
-              (bind ?dia (* (?Feature getRadius) 2.0))
-              (bind ?depth (?Feature getBottomDist ))
+
               (if (>= (?propTable get ?string)(eval ?capString) )
                then
                    (bind ?actuallySatisfied (+ 1 ?actuallySatisfied))
@@ -128,6 +135,19 @@
       (bind ?newHole (definstance Hole ?nFObj) )
       (return ?newHole)                       
   )
+  
+  (deffunction createFeatureFact (?oldHole ?process)
+     (bind ?className (call edu.ohiou.mfgresearch.implanner.processes.TokenizeName getLastToken ?process ".") )
+     (bind ?fName  (fact-slot-value ?oldHole featureName) )
+     (bind ?nFObj ((fact-slot-value ?oldHole OBJECT) makeProcessFeature (str-cat (sub-string 1 5 ?className) "-" ?fName )                        
+                  )
+      )
+     	(?nFObj setMfgPartModelName (fact-slot-value ?oldHole mfgPartModelName))
+
+	  (?nFObj settColor (new java.awt.Color 0 0 0))
+      (bind ?newHole (definstance MfgFeature ?nFObj) )
+      (return ?newHole)                       
+  )
 
 (deffunction setColorInJess (?FeatureFact ?red ?green ?blue)
       (bind ?featureObject (fact-slot-value ?FeatureFact OBJECT) )
@@ -142,7 +162,7 @@
                        
          )
 		(?process settColor (new java.awt.Color 0 0 0))
-        (bind ?processFact (definstance Holemaking ?process) )         
+        (bind ?processFact (definstance MfgProcess ?process) )         
         (return ?processFact)
 )
 

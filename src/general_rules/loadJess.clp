@@ -2,3 +2,4 @@
 (batch (str-cat ?*ruleFolder* "/relationTemplate.clp"))
 (batch (str-cat ?*ruleFolder* "/functions.clp"))
 (batch (str-cat ?*ruleFolder* "/rules.clp"))
+(batch (str-cat ?*ruleFolder* "/milling-ext.clp"))
