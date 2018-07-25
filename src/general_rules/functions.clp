@@ -63,7 +63,7 @@
     (while (?itr hasNext)
        (bind ?string (?itr next))
        (bind ?capString (?pcTable get ?string))
-	(printout t ?string ": cap string is number; "  (numberp ?capString ) crlf )
+	(printout t ?string ": cap string is number; "  (numberp ?capString ) ", value " ?capString crlf )
 
        (bind ?propString (?propTable get ?string) )
       
