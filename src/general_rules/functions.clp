@@ -15,6 +15,8 @@
       (bind ?actuallySatisfied 0)
       (bind ?LTDia (?pcTable get largestToolDiameter) )
       (bind ?STDia (?pcTable get "smallestToolDiameter"))
+      (bind ?dia 0.0)
+      (bind ?depth 0.0)
       
       ; verify for holes
       (if ((fact-slot-value ?FeatureFact OBJECT) isHole)
@@ -52,8 +54,8 @@
               (return  -1)
           )
       )
-                    (bind ?dia (* (?Feature getRadius) 2.0))
-              (bind ?depth (?Feature getBottomDist ))
+                    (set ?dia  = (* (?Feature getRadius) 2.0))
+              (set  ?depth = (?Feature getBottomDist ))
    )
    else ; it is not a hole
    )
