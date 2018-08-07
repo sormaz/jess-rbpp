@@ -3,5 +3,5 @@
 (batch (str-cat ?*ruleFolder* "/functions.clp"))
 (batch (str-cat ?*ruleFolder* "/rules.clp"))
 (batch (str-cat ?*ruleFolder* "/hole-rules.clp"))
-(batch (str-cat ?*ruleFolder* "/milling-ext.clp"))
+(batch (str-cat ?*ruleFolder* "/milling-rules.clp"))
 (batch (str-cat ?*ruleFolder* "/tool-rules.clp"))
