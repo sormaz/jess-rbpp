@@ -24,7 +24,7 @@
         (OBJECT ?pcObj) )
     (test (neq (getFeatureToleranceValue ?value "truePosition") nil ))
     (test (neq (getProcessToleranceValue ?pcObj "truePosition" ) nil ))
-    (test (> (getFeatureToleranceValue ?value "truePosition" )(getProcessToleranceValue ?pcObj "truePosition")))
+    (test (< (getFeatureToleranceValue ?value "truePosition" )(getProcessToleranceValue ?pcObj "truePosition")))
     =>
     (addToMaybeMachinedBy ?value "edu.ohiou.mfgresearch.implanner.processes.SpotDrilling" )
     (assert (FeatureRelation (Feature ?jh)
