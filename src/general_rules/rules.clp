@@ -10,6 +10,7 @@
     =>
     (removeProcessFromMbmb ?o ?processName)
     (bind ?nf (createFeatureFact ?jh ?processName))
+    (printout t "DNS-> process name: " ?processName "; feature name: " ?fName crlf)
     (bind ?returnValue (ProcessCapabilityStatus ?jh ?pc  ?nf ))
     (assert (ProcessFeatureRelation (oldFeature ?jh)(newFeature ?nf)(processCap ?pc)(status ?returnValue) ))
     )
