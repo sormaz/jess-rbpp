@@ -1,9 +1,9 @@
 
 (import edu.ohiou.mfgresearch.implanner.parts.*)
 
-(deffunction ProcessCapabilityStatus (?FeatureFact ?ProcessFact ?newFeatureFact)
+(deffunction ProcessCapabilityStatus (?FeatureFact ?procCapFact ?newFeatureFact)
       (bind ?Feature (fact-slot-value ?FeatureFact OBJECT) )
-      (bind ?Process (fact-slot-value ?ProcessFact OBJECT) )
+      (bind ?Process (fact-slot-value ?procCapFact OBJECT) )
       (bind ?newFeature (fact-slot-value ?newFeatureFact OBJECT) )
       (bind ?propTable (?Feature getTolerances))
       (bind ?hash (?propTable getToleranceHashTable) )
@@ -17,7 +17,7 @@
       (bind ?STDia (?pcTable get "smallestToolDiameter"))
       (bind ?dia 0.0)
       (bind ?depth 0.0)
-      
+      (printout t "DNS-> feature is: " (fact-slot-value ?FeatureFact featureName) "; process is " (fact-slot-value ?procCapFact name) crlf)
       ; verify for holes
       (if ((fact-slot-value ?FeatureFact OBJECT) isHole)
       then
