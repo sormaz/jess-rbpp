@@ -9,3 +9,5 @@
        (slot Feature)
        (slot status)
 )
+
+(provide relationTemplate)

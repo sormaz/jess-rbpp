@@ -1,3 +1,6 @@
+(require defclasses)
+(require relationTemplate)
+
 (defrule SelectHMProcessStatus
     ?relation <- (FeatureRelation (Feature ?jh)(status MBMBAssigned) )
     ?pc <- (ProcessCapability (name ?processName)(OBJECT ?pcObj))

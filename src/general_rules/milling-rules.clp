@@ -1,3 +1,6 @@
+(require defclasses)
+(require relationTemplate)
+
 (defrule AssignSlotRoughMilling
     ?mf <- (MfgFeature (mayBeMachinedBy ?process&:(eq (call ?process toArray) (create$ )))
         (processes ?listOfProcesses&:(eq (call ?listOfProcesses toArray) (create$ )))

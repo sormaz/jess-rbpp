@@ -25,7 +25,7 @@
 
 (defclass ProcessCapability edu.ohiou.mfgresearch.implanner.processes.ProcessCapability)
 
-
+(provide defclasses)
 
 
 

@@ -1,3 +1,5 @@
+(require defclasses)
+(require relationTemplate)
 
 (defrule selectToolAndParameters
     ?process <- (MfgProcess (OBJECT ?pObject) (featureName ?fName))
