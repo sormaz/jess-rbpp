@@ -133,7 +133,7 @@
       )
      	(?nFObj setMfgPartModelName (fact-slot-value ?oldHole mfgPartModelName))
 
-	  (?nFObj settColor (new java.awt.Color 0 0 0))
+	  (?nFObj settColor (new java.awt.Color 0 0 1.0))
       (bind ?newHole (definstance Hole ?nFObj) )
       (return ?newHole)                       
   )
@@ -146,7 +146,7 @@
       )
      	(?nFObj setMfgPartModelName (fact-slot-value ?oldHole mfgPartModelName))
 
-	  (?nFObj settColor (new java.awt.Color 0 0 0))
+	  (?nFObj settColor (new java.awt.Color 0 0 1.0))
       (bind ?newHole (definstance MfgFeature ?nFObj) )
       (return ?newHole)                       
   )
@@ -163,7 +163,7 @@
                         )
                        
          )
-		(?process settColor (new java.awt.Color 0 0 0))
+		(?process settColor (new java.awt.Color 1.0 0 1.0))
         (bind ?processFact (definstance MfgProcess ?process) )         
         (return ?processFact)
 )

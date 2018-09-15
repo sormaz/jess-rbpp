@@ -62,7 +62,7 @@
     (if (= (call ?pList size) 0) then
         (assert (FeatureRelation (Feature ?nf)(status Deadend) ))
         ; remove temporary color
-     ;   (modify ?nf (color (new java.awt.Color 0 0 0) ) )
+        ((fact-slot-value ?nf OBJECT) settColor (new java.awt.Color 1.0 0 0) ) 
         else
         (assert (FeatureRelation (Feature ?nf)(status MBMBAssigned) ))
         )
