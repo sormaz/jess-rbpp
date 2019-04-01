@@ -46,6 +46,7 @@
     (?emp setProcessTime ?t)
     (?emp setProcessCost ?c)
     (?emp setCuttingParameter)
+    (?emp makeName) ; DNSormaz added to have meaningful name of processes 033119
 )
 
 (defrule emp-complete
@@ -80,6 +81,7 @@
     (?emp setProcessCost ?c)                                ;commented by mayur 3/24/2016 (reason: time not needed for setup planning)
     ;(printout t ?t1 " tool dia " ?d1 " length " ?length " material " ?m1 crlf)
     (?emp setCuttingParameter)
+    (?emp makeName) ; DNSormaz added to have meaningful name of processes 033119
 )
 
 (defrule ems-complete
@@ -115,6 +117,7 @@
     (?emp setProcessCost ?c)
    (?emp setTool (new Tool ?t1 ?d1 ?length ?m1))
     (?emp setCuttingParameter)
+    (?emp makeName) ; DNSormaz added to have meaningful name of processes 033119    
 )
 (defrule emsm-complete
     (feature (name ?f1) (status ?ordered)(object nil))
@@ -148,6 +151,7 @@
     (?emp setProcessTime ?t)
     (?emp setProcessCost ?c)
     (?emp setCuttingParameter)
+    (?emp makeName) ; DNSormaz added to have meaningful name of processes 033119
 )
 
 (defrule drilling-complete
@@ -180,6 +184,7 @@
     (?emp setProcessTime ?t)
     (?emp setProcessCost ?c)
     (?emp setCuttingParameter)
+    (?emp makeName) ; DNSormaz added to have meaningful name of processes 033119
 )
 
 (defrule chamfer-complete
@@ -222,6 +227,7 @@
     (?emp setProcessCost ?c)
    (?emp setTool (new Tool ?t1 ?d1 ?length ?m1))
     (?emp setCuttingParameter)
+    (?emp makeName) ; DNSormaz added to have meaningful name of processes 033119
 )
 
 (defrule emslm-complete                      ; slab milling //mayur
