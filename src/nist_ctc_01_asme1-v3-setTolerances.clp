@@ -1,0 +1,5 @@
+(import edu.ohiou.mfgresearch.implanner.features.MfgFeature)
+
+(printout t "in set Tolerances for nist")
+(bind ?f (MfgFeature.findFeatureForName "SIMPLE HOLE(25)"))
+(?f setTolerance "positiveTolerance" 0.4)
