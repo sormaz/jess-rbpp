@@ -128,7 +128,15 @@
     (life-cycle 180)
 	(cost 30.000))
 )
-
+(assert (tool
+    (name T101-nist)
+    (material Hss)
+    (for-process drilling)
+    (diameter 3.5)
+    (length 25.0)
+    (life-cycle 180)
+	(cost 30.000))
+)
 (assert (cutting-condition 	
     	(process drilling)
 		(part-material CarbonSteel)
@@ -344,6 +352,7 @@
 		(speed 250)
 		(feed 0.017)
         ))
+ 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Slot ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;        
 
 (assert (tool
