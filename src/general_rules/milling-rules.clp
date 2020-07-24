@@ -4,7 +4,7 @@
 (defrule AssignSlotRoughMilling
     ?mf <- (MfgFeature (mayBeMachinedBy ?process&:(eq (call ?process toArray) (create$ )))
         (processes ?listOfProcesses&:(eq (call ?listOfProcesses toArray) (create$ )))
-        (OBJECT ?o&: (?o isSlot)) (mfgPartModelName ?part&:(neq ?part nil)) )
+        (OBJECT ?o&: (and (?o isSlot) (not (?o isClosed))))  (mfgPartModelName ?part&:(neq ?part nil)) )
     (not (FeatureRelation (Feature ?mf)))
     =>
     (addToMaybeMachinedBy ?o "edu.ohiou.mfgresearch.implanner.processes.EndMillingSlottingRough" )
