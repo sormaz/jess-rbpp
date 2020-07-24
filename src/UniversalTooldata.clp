@@ -15,6 +15,16 @@
 	(cost 30.000))
 )
 
+(assert (tool
+    (name T101-nist)
+    (material Hss)
+    (for-process drilling)
+    (diameter 0.136)         ; change dia
+    (length 5.0)              ; change length
+    (life-cycle 180)
+	(cost 30.000))
+)
+
 
 (assert (tool
     (name T102)
