@@ -33,10 +33,10 @@
 
 
 (defrule   SelectHMProcessCompleteMatch
+    ?do <- (ProcessFeatureRelation (oldFeature ?jh)(newFeature ?nf)(processCap ?pc)(status 1) )
     ?jh <- (MfgFeature (mayBeMachinedBy ?mbmb)(processes ?processList)(OBJECT ?o) (featureName ?fName) (mfgPartModelName ?part))
     ?pc <- (ProcessCapability (name ?processName)(OBJECT ?pcObj))
     ?nf <- (MfgFeature (OBJECT ?nfObj) )
-    ?do <- (ProcessFeatureRelation (oldFeature ?jh)(newFeature ?nf)(processCap ?pc)(status 1) )
     =>
     (modify ?do (status 5))
     (bind ?processInstance (createProcessInstance ?jh ?processName))
@@ -48,11 +48,11 @@
 
 
 (defrule   SelectHMProcessPartialMatch
-    
+ 
+    ?do <- (ProcessFeatureRelation (oldFeature ?jh)(newFeature ?nf)(processCap ?pc)(status ?s&:(or (= 0 ?s ) (= -1 ?s)) ))
     ?jh <- (MfgFeature (mayBeMachinedBy ?mbmb)(processes ?processList)(OBJECT ?o) (featureName ?fName) (mfgPartModelName ?part))
     ?pc <- (ProcessCapability (name ?processName)(OBJECT ?pcObj) (nextProcessList ?pList))
     ?nf <- (MfgFeature (mayBeMachinedBy ?newMbMb) (OBJECT ?nfObj) )
-    ?do <- (ProcessFeatureRelation (oldFeature ?jh)(newFeature ?nf)(processCap ?pc)(status ?s&:(or (= 0 ?s ) (= -1 ?s)) ))
     =>
     (modify ?do (status 5))
     (bind ?processInstance (createProcessInstance ?jh ?processName) )
