@@ -437,35 +437,11 @@
 )
 
 (assert (tool
-	(name T203)
+	(name T205)
 	(material Hss)
 	(for-process end-milling-slotting)
-	(diameter 0.875)
-        (length 10)
-	(number-of-teeth 4)
-	(width 0.875)
-	(life-cycle 180)
-	(cost 30.000))
-)
-
-; these two are to make slot(15) in nist example they are in MM
-(assert (tool
-	(name T204-nist)
-	(material Hss)
-	(for-process side-milling)
-	(diameter 40)
-        (width 4.0)
-	(length 10.0)
-	(life-cycle 180)
-	(cost 30.000))
-)
-
-(assert (tool
-	(name T205-nist)
-	(material Hss)
-	(for-process end-milling-slotting)
-	(diameter 4.0)
-    	(length 100)
+	(diameter 2.0)
+    	(length 10.0)
 	(number-of-teeth 4)
 	(life-cycle 180)
 	(cost 30.000))
