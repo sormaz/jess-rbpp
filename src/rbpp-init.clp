@@ -83,7 +83,7 @@
 	(slot tool)
 	(slot resting-face)
 	(slot setup-time)
-	(slot op-time)
+	(slot op-time (default -1))
 	(slot cost)
 	(slot setup-cost)
 	(slot mhandle-cost)
