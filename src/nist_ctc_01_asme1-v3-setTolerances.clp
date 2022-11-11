@@ -32,7 +32,7 @@
 (?f setTolerance "negativeTolerance" 0.02)
 (bind ?f (MfgFeature.findFeatureForName "SIMPLE HOLE(13)"))
 (?f setTolerance "positiveTolerance" 0.02)
-(?f setTolerance "negativeTolerance"0.0)
+(?f setTolerance "negativeTolerance" 0.0)
 (bind ?f (MfgFeature.findFeatureForName "SIMPLE HOLE(14)"))
 (?f setTolerance "positiveTolerance" 0.02)
 (?f setTolerance "negativeTolerance" 0.02)
@@ -57,6 +57,6 @@
 (?f setTolerance "flatness" 0.02)
 
 (bind ?f (MfgFeature.findFeatureForName "RECTANGULAR_POCKET(24)"))
-(?f setTolerance "truePosition"0.075)
+(?f setTolerance "truePosition" 0.075)
 (bind ?f (MfgFeature.findFeatureForName "RECTANGULAR_POCKET(16)"))
-(?f setTolerance "truePosition"0.075)
+(?f setTolerance "truePosition" 0.075)
