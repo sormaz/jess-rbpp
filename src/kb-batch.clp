@@ -28,7 +28,7 @@
 
 (bind ?eg (new edu.ohiou.mfgresearch.labimp.graphmodel.DefaultGraphModel (?extlist toArray)  
         (new edu.ohiou.mfgresearch.implanner.processes.ProcessKBGenerator (engine))  FALSE  FALSE))
-(?eg display)
+(?eg display ?*KB-data*)
 
 
 ;(batch "src/kb-batch.clp")
