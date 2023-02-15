@@ -7,11 +7,8 @@
     
 (bind ?mtl (assert (MachToolList)))
     
-;(batch "src/kb-load-rbpp.clp")
 
 (batch  (str-cat ?*ruleFolder* "kb-rules-make-mach-tool-ext.clp"))
-(batch  (str-cat ?*ruleFolder* "kb-rules-make-mach-tool-ext.clp"))
-
 (run)
 
 
