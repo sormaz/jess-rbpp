@@ -35,7 +35,7 @@
 	(name T601)
 	(material Carbide)
 	(for-process end-milling-slotting)
-	(diameter 0.25)
+	(diameter 1.0)
         (length 2.0)
 	;(width 0.625)
 	(number-of-teeth 4)
