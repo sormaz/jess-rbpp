@@ -1,7 +1,7 @@
 ;(strategy mea)
 ;(strategy lex)
 
-
+(defglobal ?*MAX_RANK* = 100)
 
 (deftemplate feature
 	(slot name)
@@ -78,7 +78,7 @@
 	(slot cut)
 	
 	(slot options) ; or for alternatives, and for more than one for the same feature
-	(slot rank)
+	(slot rank (type INTEGER) (default 100))
 	(slot machine)
 	(slot tool)
 	(slot resting-face)
