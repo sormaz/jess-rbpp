@@ -6,11 +6,7 @@
 
 (import edu.ohiou.mfgresearch.implanner.processes.*)
 
-
-
-    
    
-
 (defrule rule-add-tool-ext
     ?flist <- (MachToolList (fact ?factlist) (fact-ext ?extlist))
     ?tool <- (tool (name ?f1))
@@ -42,4 +38,4 @@
 
 
 ;(while (?result next)
-;   (printout t (?result getString proc) " " (?result getString mach) crlf))
+ ; (printout t (?result getString proc) " " (?result getString mach) crlf))
