@@ -5,26 +5,25 @@
 
 ;;;;;;;;; CNC Drilling Machine with Carbide Tools ;;;;;;;;;;;;;
 
-(assert (machine
-	(name RDrillFast)
-	(type drill)
-	(toolhead vertical)
-	(bed-size-x 54)
-	(bed-size-y 20)
-	(bed-size-z 10)
-	(setup-time 240)
-	(power 4)
-	(mhandling-time 0.8)
-	(speed-efficiency 1.0)
-	(tool-change-time 40)
-	(unit-cost 1.3)
-    (tool-list TR141 TR142 T470)
-))
+
 
 
 (assert (process 
     (name drilling)
-    (machine RDrillFast))
+    (machine RCnCHMillFast))
+)
+
+(assert (process 
+    (name side-milling)
+    (machine RCnCHMillFast))
+)
+(assert (process 
+    (name slab-milling)
+    (machine RCnCHMillFast))
+)
+(assert (process 
+    (name face-milling)
+    (machine RCnCHMillFast))
 )
 
 ;;;;;;;;; CNC Milling Machine with Carbide Tools ;;;;;;;;;;;;;
@@ -42,7 +41,7 @@
 	(speed-efficiency 1.0)
 	(tool-change-time 40)
 	(unit-cost 1.3)
-    (tool-list TR21212 TR21208)
+    (tool-list Td-2.4 Td-4.8)
 ))
     
  
