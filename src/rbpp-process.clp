@@ -144,7 +144,7 @@
 	=>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process drilling) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) ) ; dns 1/17/24 - added value for cost 0.0 to avoid arithmetic error
 )
 
 (defrule hole2.fine
