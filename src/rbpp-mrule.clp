@@ -138,7 +138,7 @@
 
 (defrule drilling-complete-connected
     (feature (name ?f1) (status ?ordered)(object ?f&~nil))
-     ?op <- (operation (machine ?m)(feature ?f1) (tool ?t1) (process drilling) (op-time ?t&~nil) (cost ?c) )
+     ?op <- (operation (machine ?m)(feature ?f1) (tool ?t1) (process drilling) (op-time ?t) (cost ?c) ) ; dns 1/27/24 remove nil test on time to allow run w/o cut params
     (tool (name ?t1)  (material ?m1)(diameter ?d1) (length ?length) (imp-tool ?tool&~nil))
     (machine (name ?m)(imp-machine ?mach&~nil)(tool-list $?tools&: (member$ ?t1 $?tools)))
     =>
@@ -148,7 +148,9 @@
     (?emp setStock (?*part* getStock))
     (?emp setTool ?tool)
     (?emp setMachine ?mach)
-    (?emp setProcessTime ?t)
+    (if ?t then 
+    	(?emp setProcessTime ?t)
+    	)
     (?emp setProcessCost ?c)
     (?emp setCuttingParameter)
     (?emp makeName) ; DNSormaz added to have meaningful name of processes 033119
