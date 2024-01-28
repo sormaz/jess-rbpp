@@ -21,7 +21,8 @@
 (?extlist add "side-milling") 
 (?extlist add "slab-milling")
 (?extlist add "chamfer-side-milling")    
-(?extlist add "chamfer-end-milling")           
+(?extlist add "chamfer-end-milling")     
+(?extlist add "face-milling")       
 
 (bind ?eg (new edu.ohiou.mfgresearch.labimp.graphmodel.DefaultGraphModel (?extlist toArray)  
         (new edu.ohiou.mfgresearch.implanner.processes.ProcessKBGenerator (engine))  FALSE  FALSE))
