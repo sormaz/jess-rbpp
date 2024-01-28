@@ -23,6 +23,7 @@
 (defrule tool-rule-drilling
 	?op <- (operation (feature ?f1) (process drilling) (machine ?m1) (tool nil) )
 	(feature (name ?f1) (dim1 ?d1) )
+	
      (tool (name ?n1) (for-process drilling) (diameter ?d2&:(call Gtk epsilonEquals ?d1 ?d2)) )
      (machine (name ?m1) (tool-list $?tools&: (member$ ?n1 $?tools)))
   ;  (machine (name ?m1) (tool-list ? ?n1 ?))
@@ -196,7 +197,8 @@
 	(modify ?op (tool tool-not-available) )
 )   
 
-
+/*
+comment this rule not to create extra tools
     
 (defrule tool-warning-drilling
 	(feature (name ?f1) (dim1 ?d1) )
@@ -225,7 +227,7 @@
     )
     
     
-    
+   */ 
     
     
     
