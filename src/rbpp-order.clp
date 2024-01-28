@@ -7,7 +7,7 @@
 
 (defrule select-first-feature
 	?f <- (feature (name ?f1) (status process) )
-	?op <- (operation (feature ?f1) (cost ~nil) )
+	?op <- (operation (feature ?f1)  )  ; dns 1/27/24 - removed (cost ~nil) to pass without cut parameters and cost causes error in arithmetic
 	(not (do-after (later ?f1) ))
 	(not (operation (rank ~100) ) )
 	=>
