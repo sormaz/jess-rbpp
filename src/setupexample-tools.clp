@@ -23,3 +23,14 @@
     (life-cycle 180)
 	(cost 30.000))
 )
+
+(assert (tool
+	(name Tface-18)
+	(material hss)
+	(for-process face-milling)
+	(diameter 18.0)
+	(number-of-teeth 12)
+	(life-cycle 300)
+	(cost 60.000))
+	)
+	
