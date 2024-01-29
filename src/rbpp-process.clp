@@ -11,13 +11,13 @@
 	(modify ?f (status process))
 	(assert (operation (feature ?f1) (process face-milling) (cut single) (options or) 
 		(machine nil) (tool nil)
-		(setup-time nil) (op-time nil) (cost nil) ) )
+		(setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process slab-milling) (cut single) (options or)
 		(machine nil) (tool nil)
-		(setup-time nil) (op-time nil) (cost nil) ) )
+		(setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process planing) (cut single) (options or)
 		(machine nil) (tool nil)
-		(setup-time nil) (op-time nil) (cost nil) ) )
+		(setup-time nil) (op-time nil) (cost 0.0) ) )
 )
 
 
@@ -27,11 +27,11 @@
      =>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process face-milling) (cut double) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process slab-milling) (cut double) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
     (assert (operation (feature ?f1) (process end-milling-peripheral) (cut single) (options or)        ;this process added by mayur for setup planning 3/27/16
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 )
 
 			
@@ -41,13 +41,13 @@
 	=>
 	(modify ?f (status process))
 	(assert (operation (feature ?f1) (process face-milling) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process side-milling) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process end-milling-peripheral) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process planing) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 )
 
 			
@@ -56,11 +56,11 @@
 		(type slab) (status input) (quality ?quality&:(<= ?quality 30 ) ) (dim2 ?dim2&:(> ?dim2 8) ) ) ;commented by mayur (not needed for setup planning)
 	=>	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process face-milling) (cut double) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process sidemilling) (cut double) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process end-milling-peripheral) (cut double) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 )
 		
 		
@@ -70,13 +70,13 @@
 	=>
 	(modify ?f (status process))
 	(assert (operation (feature ?f1) (process end-milling-peripheral) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process side-milling) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process end-milling-slotting) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process planing) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 )
 
 
@@ -86,11 +86,11 @@
 	=>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process end-milling-slotting) (cut double) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process side-milling) (cut double) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process end-milling-peripheral) (cut double )(options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 )*/
 
 (defrule pocket.rough.small
@@ -99,7 +99,7 @@
 	=>
 	(modify ?f (status process))
 	(assert (operation (feature ?f1) (process end-milling-peripheral) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )	
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )	
 )
 
 ;Create Rules for Chamfer
@@ -109,9 +109,9 @@
 	=>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process chamfer-end-milling ) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time 0.5) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time 0.5) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process chamfer-side-milling) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
     
 )
 
@@ -121,9 +121,9 @@
 	=>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process end-milling-slotting) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process side-milling) (cut single) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
     
 )
 		
@@ -133,9 +133,9 @@
 	=>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process end-milling-slotting) (cut double) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process side-milling) (cut double) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 )
 		
 (defrule hole1.rough
@@ -152,7 +152,7 @@
 	=>
 	(modify ?f (type bore) )
 	(assert (operation (feature ?f1) (process drilling) (options or)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 )
 
 (defrule hole3.fine.small
@@ -160,7 +160,7 @@
 	=>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process reaming) (options and)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 )
 
 (defrule hole4.fine.big
@@ -169,7 +169,7 @@
 	=>
 	(modify ?f (status process) )
 	(assert (operation (feature ?f1) (process reaming) (options and)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 	(assert (operation (feature ?f1) (process boring) (options and)
-		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost nil) ) )
+		(machine nil) (tool nil) (setup-time nil) (op-time nil) (cost 0.0) ) )
 )
