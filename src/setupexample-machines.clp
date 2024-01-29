@@ -41,7 +41,7 @@
 	(speed-efficiency 1.0)
 	(tool-change-time 40)
 	(unit-cost 1.3)
-    (tool-list Td-2.4 Td-4.8)
+    (tool-list Td-2.4 Td-4.8 Tface-18)
 ))
     
  
