@@ -8,16 +8,16 @@
 	(machine (name ?m1) (setup-time ?setup) (unit-cost ?ucost)
 		(mhandling-time ?mh) (tool-change-time ?tch) )
 	(not (operation (rank 100) (cost ~nil) ) )
-	(not (operation (rank ?r&:(< ?r ?rank)) (cost ~nil) ) )
+	(not (operation (rank ?r&:(< ?r ?rank))  ) ) ; dsn 1/27/24 removed (cost ~nil)
 	=>
 	(bind ?setupc (* ?ucost (/ ?setup ?batch) ) )
 	(bind ?mhc (* ?mh ?ucost) ) 
 	(bind ?tchcost (* ?tch ?ucost) ) 
 	(printout t "costs: "  ?setupc " " ?mhc " " ?tchcost crlf)
-	(modify ?op (setup-cost ?setupc) 
-		(mhandle-cost ?mhc)
-		(toolchange-cost ?tchcost)
-		(cum-cost ( + ?cost ?setupc ?mhc ?tchcost) ))
+;	(modify ?op (setup-cost ?setupc) 
+;		(mhandle-cost ?mhc)
+;		(toolchange-cost ?tchcost)
+;		(cum-cost ( + ?cost ?setupc ?mhc ?tchcost) ))
 )
         
 (defrule feature-ranked
