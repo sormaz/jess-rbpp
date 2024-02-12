@@ -26,7 +26,7 @@
 
 (assert (tool
 	(name Tface-18)
-	(material hss)
+	(material Hss)
 	(for-process face-milling)
 	(diameter 18.0)
 	(number-of-teeth 12)
