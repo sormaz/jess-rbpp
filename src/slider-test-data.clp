@@ -29,13 +29,3 @@
     (name side-milling) 
     (machine CncHMillSlow))
 )
-
-(assert (process 
-    (name end-milling-peripheral)
-    (machine CncHMillSlow))
-)
-
-(assert (process 
-    (name end-milling-slotting)
-    (machine CncHMillSlow))
-)
