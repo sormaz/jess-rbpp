@@ -28,6 +28,7 @@
 (assert (process 
     (name side-milling) 
     (machine CncHMillSlow))
+
 )
 
 (assert (process 
@@ -48,3 +49,4 @@
 		(speed 60)
 		(feed 0.007)
         ))
+		
