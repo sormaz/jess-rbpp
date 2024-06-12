@@ -45,7 +45,7 @@
 
 (defrule calc-mach-time-drilling
 	 (part (material ?mat) )
-	 ?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process drilling) (op-time nil) )
+	 ?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process drilling) (op-time -1) ) ; dns removed nil and added -1 - 061224
 	 (machine (name ?m1) (speed-efficiency ?eff) )
 	 (feature (name ?f1) (dim1 ?diam) (dim2 ?length) )
 	 (tool (name ?t1) (material ?tmat) (diameter ?tdia) )
@@ -56,7 +56,7 @@
 
 (defrule calc-mach-time-boring
 	 (part (material ?mat) )
-	 ?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process boring) (op-time nil) )
+	 ?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process boring) (op-time -1) ) ; dns removed nil and added -1 - 061224
 	 (machine (name ?m1) (speed-efficiency ?eff) )
 	 (feature (name ?f1) (dim1 ?diam) (dim2 ?length) ) 
 	 (tool (name ?t1) (material ?tmat) (diameter ?tdia) )
@@ -67,7 +67,7 @@
 
 (defrule calc-mach-time-end-milling-slotting-hole
 	(part (material ?mat) )
-	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process end-milling-slotting) (op-time nil) )
+	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process end-milling-slotting) (op-time -1) ) ; dns removed nil and added -1 - 061224
 	(machine (name ?m1) (speed-efficiency ?eff) )
 	(feature (name ?f1) (dim1 ?diam) (dim2 ?length) )
     (tool (name ?t1) (material ?mat) (diameter ?tdia) )
@@ -79,7 +79,7 @@
 
 (defrule calc-mach-time-reaming
 	?p <- (part (material ?mat) )
-	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process reaming) (op-time nil) )
+	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process reaming) (op-time -1) ) ; dns removed nil and added -1 - 061224 )
 	(machine (name ?m1) (speed-efficiency ?eff) ) 
 	(feature (name ?f1) (dim1 ?diam) (dim2 ?length) ) 
 	(tool (name ?t1) (material ?tmat) (diameter ?tdia) ) 
@@ -90,7 +90,7 @@
 
 (defrule calc-mach-time-face-milling
 	(part (material ?mat) )
-	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process face-milling) (op-time nil) )
+	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process face-milling) (op-time -1) ) ; dns removed nil and added -1 - 061224
 	(machine (name ?m1) (speed-efficiency ?eff) )
 	(feature (name ?f1) (dim1 ?length) )
 	(tool (name ?t1) (material ?tmat) (diameter ?tdia) (number-of-teeth ?nteeth) )
@@ -101,7 +101,7 @@
 
 (defrule calc-mach-time-side-milling
 	(part (material ?mat) )
-	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process side-milling) (op-time nil) )
+	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process side-milling) (op-time -1) ) ; dns removed nil and added -1
 	(machine (name ?m1) (speed-efficiency ?eff) )
 	(feature (name ?f1) (dim1 ?length) (dim2 ?fwidth) ) 
 	(tool (name ?t1) (material ?tmat) (diameter ?tdia) (number-of-teeth ?nteeth) (width ?twidth) )
@@ -117,7 +117,7 @@
 
 (defrule calc-mach-time-slab-milling
 	(part (material ?mat) )
-	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process slab-milling) (op-time nil) )
+	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process slab-milling) (op-time -1) ) ; dns removed nil and added -1 - 061224
 	(machine (name ?m1) (speed-efficiency ?eff) )
 	(feature (name ?f1) (dim1 ?length) (dim2 ?fwidth) )
 	(tool (name ?t1) (material ?tmat) (diameter ?tdia) (number-of-teeth ?nteeth) (width ?twidth) )
@@ -129,7 +129,7 @@
 )
 
 (defrule calc-mach-time-end-milling-peripheral
-	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process end-milling-peripheral) (op-time nil) )
+	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process end-milling-peripheral) (op-time -1) ) ; dns removed nil and added -1 - 061224
 	(machine (name ?m1) (speed-efficiency ?eff) )
 	(feature (name ?f1) (dim1 ?length) )
 	(tool (name ?t1) (material ?tmat) (diameter ?tdia) (number-of-teeth ?nteeth) )
@@ -144,7 +144,7 @@
 
 (defrule calc-mach-time-end-milling-slotting-slot
 	(part (material ?mat) )
-	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process end-milling-slotting) (op-time nil) )
+	?op <- (operation (feature ?f1) (machine ?m1) (tool ?t1) (process end-milling-slotting) (op-time -1) ) ; dns removed nil and added -1 - 061224
 	(machine (name ?m1) (speed-efficiency ?eff) )
 	(feature (name ?f1) (type slot) (dim1 ?fdepth) (dim3 ?length) )
 	(tool (name ?t1) (material ?tmat) (diameter ?tdia) (number-of-teeth ?nteeth) (width ?twidth) )
