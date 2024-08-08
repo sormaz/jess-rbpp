@@ -28,4 +28,25 @@
 (assert (process 
     (name side-milling) 
     (machine CncHMillSlow))
+
 )
+
+(assert (process 
+    (name end-milling-peripheral)
+    (machine CncHMillSlow))
+)
+
+(assert (process 
+    (name end-milling-slotting)
+    (machine CncHMillSlow))
+)
+
+(assert (cutting-condition 	
+    	(process side-milling)
+		(part-material CarbonSteel)
+		(tool-material Hss)
+		(tool-diameter 5.0)
+		(speed 60)
+		(feed 0.007)
+        ))
+		

@@ -181,11 +181,11 @@
 )
 
 (deffunction getFeatureToleranceValue (?FeaturePropertyTableObject ?toleranceString)
-        (return (call (call ?FeaturePropertyTableObject getTolerances) get "truePosition") )
+        (return (call (call ?FeaturePropertyTableObject getTolerances) get ?toleranceString) )
 )
 
 (deffunction getProcessToleranceValue (?ProcessPropertyTableObject ?toleranceString)
-        (return (call (call ?ProcessPropertyTableObject getPropTable) get "truePosition") )
+        (return (call (call ?ProcessPropertyTableObject getPropTable) get ?toleranceString) )
 )
 
 
