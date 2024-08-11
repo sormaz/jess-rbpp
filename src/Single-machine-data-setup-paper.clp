@@ -40,3 +40,8 @@
     (name end-milling-slotting)
     (machine CncHMillFast))
 )
+
+(assert (process 
+    (name drilling)
+    (machine CncHMillFast))
+)
