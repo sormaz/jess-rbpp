@@ -386,7 +386,7 @@
 	(name T802)
 	(material Carbide)
 	(for-process slab-milling)
-	(diameter 10.0)
+	(diameter 600.0) ; dsormaz changed for setup example
         (width 5.0)
 	(life-cycle 180)
 	(cost 30.000))

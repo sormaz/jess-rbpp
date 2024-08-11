@@ -45,3 +45,8 @@
     (name drilling)
     (machine CncHMillFast))
 )
+
+(assert (process 
+    (name slab-milling)
+    (machine CncHMillFast))
+)
