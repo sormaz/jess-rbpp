@@ -13,7 +13,7 @@
     (test (not (?factlist contains ?tool)))
     =>
     (?factlist add ?tool)
-    (?extlist add (new FactExtension ?tool))
+    (?extlist add (new FactKBExtension ?tool))
     (printout t "List:" (?factlist toString) crlf)
     )
     
@@ -23,7 +23,7 @@
     (test (not (?factlist contains ?mach)))
     =>
     (?factlist add ?mach)
-    (?extlist add (new FactExtension ?mach))
+    (?extlist add (new FactKBExtension ?mach))
     (printout t "List:" (?factlist toString) crlf)
     )
     
