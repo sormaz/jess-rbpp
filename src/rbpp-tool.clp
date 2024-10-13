@@ -67,7 +67,7 @@
 	(operation (feature ?f1) (process end-milling-peripheral) (machine ?m1) (tool ?n2 & ~nil ) )
    	(tool (name ?n1 & ~?n2) (for-process ?p1 & end-milling-periphera1) (length ?length &:(> ?length ?d1) ))
     (machine (name ?m1) (tool-list $?tools&: (member$ ?n1 $?tools)))
-	(operation (feature ?f1) (process ?p1) (machine ?m1) (tool ?n1) )
+	(not (operation (feature ?f1) (process ?p1) (machine ?m1) (tool ?n1) ) )
 	=>
 	(assert (operation (feature ?f1) (process ?p1) (machine ?m1) (tool ?n1) ) )
 )
