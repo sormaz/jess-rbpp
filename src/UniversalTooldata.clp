@@ -1860,7 +1860,7 @@
 	(life-cycle 240)
 	(cost 25.000))
 )
-
+       
 (assert (cutting-condition 	
     	(process end-milling-peripheral)
 		(part-material CarbonSteel)
