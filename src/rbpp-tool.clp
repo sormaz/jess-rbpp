@@ -160,7 +160,8 @@
 )
 
 
-
+/*
+comment this rule to test anc101 dns 10/19/24
 
 ;(defrule tool-rul-no-tool-drilling
 ;	(feature (name ?f1) (dim1 ?d1) )
