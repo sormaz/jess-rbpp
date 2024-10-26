@@ -1,2 +1,2 @@
-(batch (str-cat ?*ruleFolder* "Machinedata.clp"))
-(batch (str-cat ?*ruleFolder* "UniversalTooldata.clp"))
+(batch (str-cat ?*ruleFolder* "Milad-thesis/Milad-thesis-machine-data.clp"))
+(batch (str-cat ?*ruleFolder* "Milad-thesis/Switcharm-tool-data.clp"))

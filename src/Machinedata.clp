@@ -96,7 +96,7 @@
 	(tool-change-time 40)
 	(unit-cost 1.3)
     (tool-list T501 T502 T503 T504 T505 T506 T507 T508 T509 T510 T511 
-               T512)
+               T512 T513 T113)
 ))
 
 
@@ -186,7 +186,7 @@
 	(speed-efficiency 1.0)
 	(tool-change-time 40)
 	(unit-cost 1.3)
-    (tool-list T102 T101 T103 T104 T105 T106 T107 T108 T109 T110 T111 T112 T101-nist)
+    (tool-list T102 T101 T103 T104 T105 T106 T107 T108 T109 T110 T111 T112 T101-nist T513 T113)
 ))
 
 
