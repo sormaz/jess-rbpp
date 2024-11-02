@@ -1,3 +1,5 @@
+(batch (str-cat ?*ruleFolder* "Milad-thesis/Milad-thesis-machine-data.clp"))
+
 ;(in-package : ops)
 (require rbpp-init)
 
