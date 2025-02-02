@@ -5,7 +5,7 @@
 
 
 (assert (machine
-	(name CncHMillFast)
+	(name HMillFast)
 	(type mill)
 	(toolhead horizontal)
 	(bed-size-x 54)
@@ -23,28 +23,28 @@
 
 (assert (process 
     (name chamfer-side-milling);for CNC Vertical machine for chamfering***************************
-    (machine CncHMillFast))
+    (machine HMillFast))
 )
 
 (assert (process 
     (name side-milling) 
-    (machine CncHMillFast))
+    (machine HMillFast))
 )
 
 (assert (process 
     (name end-milling-peripheral)
-    (machine CncHMillFast))
+    (machine HMillFast))
 )
 
 (assert (process 
     (name end-milling-slotting)
-    (machine CncHMillFast))
+    (machine HMillFast))
 )
 
 ;;;;;;;;; CNC Vertical Milling Machine with Carbide Tools 
 
 (assert (machine
-	(name CncVMillFast)
+	(name VMillFast)
 	(type mill)
 	(toolhead vertical)
 	(bed-size-x 54)
@@ -62,28 +62,28 @@
 
 (assert (process 
     (name chamfer-end-milling) ;for CNC Vertical machine for chamfering***************************
-    (machine CncVMillFast))
+    (machine VMillFast))
 )
 
 (assert (process 
     (name end-milling-peripheral)
-    (machine CncVMillFast))
+    (machine VMillFast))
 )
 
 (assert (process 
     (name end-milling-slotting)
-    (machine CncVMillFast))
+    (machine VMillFast))
 )
 
 (assert (process 
     (name slab-milling)
-    (machine CncVMillFast))
+    (machine VMillFast))
 )
 
 ;;;;;;;;; CNC 4-axis Milling Machine with HSS Tools    ;;;;; added for Milad thesis (CNC 4-axis Mill Fast);;;;
 
 (assert (machine
-	(name Cnc4axisMillFast)
+	(name 4axisMillFast)
 	(type mill)
 	(toolhead vertical)
 	(bed-size-x 54)
@@ -101,27 +101,27 @@
 
 (assert (process 
     (name drilling)
-    (machine Cnc4axisMillFast))
+    (machine 4axisMillFast))
 )
 
 (assert (process 
     (name end-milling-peripheral)
-    (machine Cnc4axisMillFast))
+    (machine 4axisMillFast))
 )
 
 (assert (process 
     (name end-milling-slotting)
-    (machine Cnc4axisMillFast))
+    (machine 4axisMillFast))
 )
 
 (assert (process 
     (name slab-milling)
-    (machine Cnc4axisMillFast))
+    (machine 4axisMillFast))
 )
 
 (assert (process 
     (name TwistDrilling)
-    (machine Cnc4axisMillFast))
+    (machine 4axisMillFast))
 )
 
 ;;;;;;;;;;;;;;;;;----------------------------------Machines with HSS tools----------------;;;;;;;;;;
@@ -129,7 +129,7 @@
 ;;;;;;;;; CNC Horizontal Milling Machine with HSS Tools 
 
 (assert (machine
-	(name CncHMillSlow)
+	(name HMillSlow)
 	(type mill)
 	(toolhead horizontal)
 	(bed-size-x 54)
@@ -147,23 +147,23 @@
 
 (assert (process 
     (name side-milling) 
-    (machine CncHMillSlow))
+    (machine HMillSlow))
 )
 
 (assert (process 
     (name end-milling-peripheral)
-    (machine CncHMillSlow))
+    (machine HMillSlow))
 )
 
 (assert (process 
     (name end-milling-slotting)
-    (machine CncHMillSlow))
+    (machine HMillSlow))
 )
 
 ;;;;;;;;; CNC Vertical Milling Machine with HSS Tools 
 
 (assert (machine
-	(name CncVMillSlow)
+	(name VMillSlow)
 	(type mill)
 	(toolhead vertical)
 	(bed-size-x 54)
@@ -182,12 +182,12 @@
 
 (assert (process 
     (name end-milling-peripheral)
-    (machine CncVMillSlow))
+    (machine VMillSlow))
 )
 
 (assert (process 
     (name end-milling-slotting)
-    (machine CncVMillSlow))
+    (machine VMillSlow))
 )
 
 
@@ -195,7 +195,7 @@
 ;;;;;;;;; CNC 4-axis Milling Machine with Carbide Tools    ;;;;; added for Milad thesis (CNC 4-axis Mill Slow);;;;
 
 (assert (machine
-	(name Cnc4axisMillSlow)
+	(name 4axisMillSlow)
 	(type mill)
 	(toolhead vertical)
 	(bed-size-x 54)
@@ -213,22 +213,22 @@
 
 (assert (process 
     (name drilling)
-    (machine Cnc4axisMillSlow))
+    (machine 4axisMillSlow))
 )
 
 (assert (process 
     (name end-milling-peripheral)
-    (machine Cnc4axisMillSlow))
+    (machine 4axisMillSlow))
 )
 
 (assert (process 
     (name end-milling-slotting)
-    (machine Cnc4axisMillSlow))
+    (machine 4axisMillSlow))
 )
 
 (assert (process 
     (name slab-milling)
-    (machine Cnc4axisMillSlow))
+    (machine 4axisMillSlow))
 )
 
 ;;;;;;;;;;;;;;;;;----------------------Machines with HSS and Carbide tools----------------;;;;;;;;;;
@@ -236,7 +236,7 @@
 ;;;;;;;;; CNC Horizontal Milling Machine with Carbide and HSS Tools 
 
 (assert (machine
-	(name CncHMillComb)
+	(name HMillMed)
 	(type mill)
 	(toolhead horizontal)
 	(bed-size-x 54)
@@ -256,23 +256,23 @@
 
 (assert (process 
     (name side-milling) 
-    (machine CncHMillComb))
+    (machine HMillMed))
 )
 
 (assert (process 
     (name end-milling-peripheral)
-    (machine CncHMillComb))
+    (machine HMillMed))
 )
 
 (assert (process 
     (name end-milling-slotting)
-    (machine CncHMillComb))
+    (machine HMillMed))
 )
 
 ;;;;;;;;; CNC Vertical Milling Machine with Carbide and HSS Tools 
 
 (assert (machine
-	(name CncVMillComb)
+	(name VMillMed)
 	(type mill)
 	(toolhead vertical)
 	(bed-size-x 54)
@@ -293,10 +293,10 @@
 
 (assert (process 
     (name end-milling-peripheral)
-    (machine CncVMillComb))
+    (machine VMillMed))
 )
 
 (assert (process 
     (name end-milling-slotting)
-    (machine CncVMillComb))
+    (machine VMillMed))
 )
