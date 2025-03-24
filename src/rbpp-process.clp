@@ -92,7 +92,7 @@
 
 (defrule pocket.rough.small
 	?f <- (feature (name ?f1)
-		(type pocket) (status input) (quality ?quality&:(<= ?quality 100) ) (dim2 ?dim2&:(<= ?dim2 100) ) )
+		(type pocket) (status input) (quality ?quality&:(<= ?quality 100) )  )   ; removed by DNS 3/23/25: (dim2 ?dim2&:(<= ?dim2 100) )
 	=>
 	(modify ?f (status process))
 	(assert (operation (feature ?f1) (process end-milling-peripheral) (cut single) (options or)
