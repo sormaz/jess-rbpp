@@ -35,6 +35,16 @@
 		(speed 30)
 		(feed 0.017)
         ))
+        
+(assert (cutting-condition 	
+    	(process drilling)
+		(part-material CarbonSteel)
+		(tool-material Hss)
+		(tool-diameter 2.0)
+		(speed 30)
+		(feed 0.034) ;this is arbitrary value
+        ))
+
 
 (assert (cutting-condition 	
     	(process drilling)
