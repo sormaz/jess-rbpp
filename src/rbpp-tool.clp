@@ -54,7 +54,7 @@
 ;****************************
     
 (defrule tool-rule1-end-milling-peripheral
-	(feature (name ?f1) (dim2 ?d1) )
+	(feature (name ?f1) (dim1 ?d1) )
 	?op <- (operation (feature ?f1) (process end-milling-peripheral) (machine ?m1) (tool nil) )
 	(tool (name ?n1) (for-process end-milling-peripheral) (length ?length&:(> ?length ?d1) ) )
     (machine (name ?m1) (tool-list $?tools&: (member$ ?n1 $?tools)))
@@ -63,7 +63,7 @@
 )
 
 (defrule tool-rule2-end-milling-peripheral-alternate
-	(feature (name ?f1) (dim2 ?d1) )
+	(feature (name ?f1) (dim1 ?d1) )
 	(operation (feature ?f1) (process end-milling-peripheral) (machine ?m1) (tool ?n2 & ~nil ) )
    	(tool (name ?n1 & ~?n2) (for-process ?p1 & end-milling-periphera1) (length ?length &:(> ?length ?d1) ))
     (machine (name ?m1) (tool-list $?tools&: (member$ ?n1 $?tools)))
