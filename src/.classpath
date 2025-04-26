@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="general_rules"/>
+	<classpathentry kind="src" path="setup-test"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/implanner"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/labimp.basis"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/labimp.extend"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/labimp.graph"/>
-	<classpathentry kind="lib" path="C:/Users/sormaz/.m2/repository/gov/sandia/jess/1.4.0/jess-1.4.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/sormaz/.m2/repository/gov/sandia/jsr/9.4.0/jsr-9.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dusan/.m2/repository/gov/sandia/jess/1.4.0/jess-1.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dusan/.m2/repository/gov/sandia/jsr/9.4.0/jsr-9.4.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,6 +1,6 @@
-(batch (str-cat ?*ruleFolder* "Milad-thesis/Milad-thesis-cnc-machine-data.clp"))
 ;(in-package : ops)
 (require rbpp-init)
+
 
 ;;;;;;;;;------------------------------Tool Material HSS ---------------------;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;       Drilling         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -11,6 +11,16 @@
     (for-process drilling)
     (diameter 0.136)
     (length 5.0)
+    (life-cycle 180)
+	(cost 30.000))
+)
+
+(assert (tool
+    (name T101-nist)
+    (material Hss)
+    (for-process drilling)
+    (diameter 0.136)         ; change dia
+    (length 5.0)              ; change length
     (life-cycle 180)
 	(cost 30.000))
 )
@@ -128,7 +138,15 @@
     (life-cycle 180)
 	(cost 30.000))
 )
-
+(assert (tool
+    (name T101-nist)
+    (material Hss)
+    (for-process drilling)
+    (diameter 3.5)
+    (length 25.0)
+    (life-cycle 180)
+	(cost 30.000))
+)
 (assert (cutting-condition 	
     	(process drilling)
 		(part-material CarbonSteel)
@@ -344,6 +362,7 @@
 		(speed 250)
 		(feed 0.017)
         ))
+ 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Slot ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;        
 
 (assert (tool
@@ -354,6 +373,28 @@
         (length 10)
 	(width 0.625)
 	(number-of-teeth 4)
+	(life-cycle 180)
+	(cost 30.000))
+)
+
+(assert (tool                                   ;added by mayur for Slider slot
+	(name T430)
+	(material hss)
+	(for-process end-milling-slotting)
+	(diameter 0.2)
+        (length 3.0)
+	(number-of-teeth 4)
+	(life-cycle 240)
+	(cost 40.000))
+)
+
+(assert (tool
+	(name T431)
+	(material Hss)
+	(for-process side-milling)
+	(diameter 4)
+        (width 0.2)
+	(length 10.0)
 	(life-cycle 180)
 	(cost 30.000))
 )
@@ -396,11 +437,35 @@
 )
 
 (assert (tool
-	(name T205)
+	(name T203)
 	(material Hss)
 	(for-process end-milling-slotting)
-	(diameter 2.0)
-    	(length 10.0)
+	(diameter 0.875)
+        (length 10)
+	(number-of-teeth 4)
+	(width 0.875)
+	(life-cycle 180)
+	(cost 30.000))
+)
+
+; these two are to make slot(15) in nist example they are in MM
+(assert (tool
+	(name T204-nist)
+	(material Hss)
+	(for-process side-milling)
+	(diameter 40)
+        (width 4.0)
+	(length 10.0)
+	(life-cycle 180)
+	(cost 30.000))
+)
+
+(assert (tool
+	(name T205-nist)
+	(material Hss)
+	(for-process end-milling-slotting)
+	(diameter 4.0)
+    	(length 100)
 	(number-of-teeth 4)
 	(life-cycle 180)
 	(cost 30.000))
@@ -545,7 +610,7 @@
 	(name T217)
 	(material Hss)
 	(for-process end-milling-slotting)
-	(diameter 12.5)         ;changed by mayur for ANC101 V4
+	(diameter 5.0)
         (length 10)
 	(number-of-teeth 4)
 	(life-cycle 180)
@@ -557,8 +622,8 @@
 	(name T218)
 	(material Hss)
 	(for-process side-milling)
-	(diameter 10.0)           ;changed by mayur for ANC101 V4
-        (width 12.5)
+	(diameter 10.0)
+        (width 5.0)
 	(length 10)
 	(life-cycle 180)
 	(cost 30.000))
@@ -582,6 +647,25 @@
 		(tool-diameter 0.625)
 		(speed 70)
 		(feed 0.006)
+        ))
+
+(assert (cutting-condition 	
+    	(process end-milling-slotting)
+		(part-material CarbonSteel)
+		(tool-material Hss)
+		(tool-diameter 4)
+		(speed 70)
+		(feed 0.006)
+        ))
+
+
+(assert (cutting-condition 	
+    	(process side-milling)
+		(part-material CarbonSteel)
+		(tool-material Hss)
+		(tool-diameter 0.2)
+		(speed 60)
+		(feed 0.007)
         ))
 
 (assert (cutting-condition 	
@@ -838,7 +922,7 @@
 	(material Hss)
 	(for-process end-milling-peripheral)
 	(diameter 2.0)
-	(length 51.0) ;made it to 51 by mayur, because it should be greater than dim2 for ANC101
+	(length 5.0)
 	(life-cycle 240)
 	(cost 25.000))
 )
@@ -926,7 +1010,7 @@
     (name T501)
     (material Carbide)
     (for-process drilling)
-    (diameter 75)   ;changed by mayur for ANC101 V4
+    (diameter 0.136)
     (length 1.7)
     (life-cycle 180)
 	(cost 30.000))
@@ -937,7 +1021,7 @@
     (name T502)
     (material Carbide)
     (for-process drilling)
-    (diameter 65) ;changed by mayur for ANC101 V4
+    (diameter 0.250)
     (length 0.25)
     (life-cycle 180)
 	(cost 30.000))
@@ -947,7 +1031,7 @@
     (name T503)
     (material Carbide)
     (for-process drilling)
-    (diameter 50) ;changed by mayur for ANC101 V4
+    (diameter 0.785)
     (length 1.0)
     (life-cycle 180)
 	(cost 30.000))
@@ -957,7 +1041,7 @@
     (name T504)
     (material Carbide)
     (for-process drilling)
-    (diameter 13) ;changed by mayur for ANC101 V4
+    (diameter 0.630)
     (length 1.0)
     (life-cycle 180)
 	(cost 30.000))
@@ -966,7 +1050,7 @@
     (name T505)
     (material Carbide)
     (for-process drilling)
-    (diameter 10) ;changed by mayur for ANC101 V4
+    (diameter 0.089)
     (length 1.455)
     (life-cycle 180)
 	(cost 30.000))
@@ -976,7 +1060,7 @@
     (name T506)
     (material Carbide)
     (for-process drilling)
-    (diameter 25) ;changed by mayur for ANC101 V4
+    (diameter 0.125)
     (length 1.455)
     (life-cycle 180)
 	(cost 30.000))
@@ -1047,7 +1131,7 @@
     	(process drilling)
 		(part-material CarbonSteel)
 		(tool-material Carbide)
-		(tool-diameter 75) ;changed by mayur for ANC101 V4
+		(tool-diameter 0.136)
 		(speed 180)
 		(feed 0.003)
         ))
@@ -1056,7 +1140,7 @@
     	(process drilling)
 		(part-material Aluminum)
 		(tool-material Carbide)
-		(tool-diameter 65) ;changed by mayur for ANC101 V4
+		(tool-diameter 0.136)
 		(speed 300)
 		(feed 0.004)
         ))
@@ -1066,7 +1150,7 @@
     	(process drilling)
 		(part-material CarbonSteel)
 		(tool-material Carbide)
-		(tool-diameter 50) ;changed by mayur for ANC101 V4
+		(tool-diameter 0.250)
 		(speed 180)
 		(feed 0.004)
         ))
@@ -1075,7 +1159,7 @@
     	(process drilling)
 		(part-material Aluminum)
 		(tool-material Carbide)
-		(tool-diameter 13) ;changed by mayur for ANC101 V4
+		(tool-diameter 0.250)
 		(speed 300)
 		(feed 0.005)
         ))
@@ -1083,7 +1167,7 @@
     	(process drilling)
 		(part-material CarbonSteel)
 		(tool-material Carbide)
-		(tool-diameter 10) ;changed by mayur for ANC101 V4
+		(tool-diameter 0.785)
 		(speed 180)
 		(feed 0.010)
         ))
@@ -1092,7 +1176,7 @@
     	(process drilling)
 		(part-material Aluminum)
 		(tool-material Carbide)
-		(tool-diameter 25) ;changed by mayur for ANC101 V4
+		(tool-diameter 0.785)
 		(speed 300)
 		(feed 0.011)
         ))
@@ -1772,68 +1856,98 @@
 	(material Carbide)
 	(for-process end-milling-peripheral)
 	(diameter 2.0)
-	(length 51.0)   ;made it to 51 by mayur, because it should be greater than dim2 for ANC101
+	(length 5.0)
+	(life-cycle 240)
+	(cost 25.000))
+)
+       
+(assert (cutting-condition 	
+    	(process end-milling-peripheral)
+		(part-material CarbonSteel)
+		(tool-material Carbide)
+		(tool-diameter 1.5)
+		(speed 375)
+		(feed 0.007)
+        ))
+
+(assert (cutting-condition 	
+    	(process end-milling-peripheral)
+		(part-material Aluminum)
+		(tool-material Carbide)
+		(tool-diameter 1.5)
+		(speed 2000)
+		(feed 0.009)
+        ))
+
+
+(assert (cutting-condition 	
+    	(process end-milling-peripheral)
+		(part-material CarbonSteel)
+		(tool-material Carbide)
+		(tool-diameter 1.0)
+		(speed 375)
+		(feed 0.007)
+        ))
+
+(assert (cutting-condition 	
+    	(process end-milling-peripheral)
+		(part-material Aluminum)
+		(tool-material Carbide)
+		(tool-diameter 1.0)
+		(speed 2000)
+		(feed 0.009)
+        ))
+
+(assert (cutting-condition 	
+    	(process end-milling-peripheral)
+		(part-material CarbonSteel)
+		(tool-material Carbide)
+		(tool-diameter 0.5)
+		(speed 375)
+		(feed 0.007)
+        ))
+
+(assert (cutting-condition 	
+    	(process end-milling-peripheral)
+		(part-material Aluminum)
+		(tool-material Carbide)
+		(tool-diameter 0.5)
+		(speed 2000)
+		(feed 0.009)
+        ))
+
+(assert (cutting-condition 	
+    	(process end-milling-peripheral)
+		(part-material CarbonSteel)
+		(tool-material Carbide)
+		(tool-diameter 2.0)
+		(speed 375)
+		(feed 0.007)
+        ))
+
+(assert (cutting-condition 	
+    	(process end-milling-peripheral)
+		(part-material Aluminum)
+		(tool-material Carbide)
+		(tool-diameter 2.0)
+		(speed 2000)
+		(feed 0.009)
+        ))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Top Surface  //created by Mayur   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(assert (tool
+	(name T801)                       ;tool 801 for slab milling //mayur
+	(material Carbide)
+	(for-process slab-milling)
+	(diameter 2.0)
+	(length 5.0)
 	(life-cycle 240)
 	(cost 25.000))
 )
 
 (assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material CarbonSteel)
-		(tool-material Carbide)
-		(tool-diameter 1.5)
-		(speed 375)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material Aluminum)
-		(tool-material Carbide)
-		(tool-diameter 1.5)
-		(speed 2000)
-		(feed 0.009)
-        ))
-
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material CarbonSteel)
-		(tool-material Carbide)
-		(tool-diameter 1.0)
-		(speed 375)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material Aluminum)
-		(tool-material Carbide)
-		(tool-diameter 1.0)
-		(speed 2000)
-		(feed 0.009)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material CarbonSteel)
-		(tool-material Carbide)
-		(tool-diameter 0.5)
-		(speed 375)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material Aluminum)
-		(tool-material Carbide)
-		(tool-diameter 0.5)
-		(speed 2000)
-		(feed 0.009)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
+    	(process slab-milling)
 		(part-material CarbonSteel)
 		(tool-material Carbide)
 		(tool-diameter 2.0)
@@ -1841,11 +1955,25 @@
 		(feed 0.007)
         ))
 
+(assert (tool
+	(name T802)
+	(material Carbide)
+	(for-process slab-milling)
+	(diameter 10.0)
+        (width 5.0)
+	(life-cycle 180)
+	(cost 30.000))
+)
+
 (assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material Aluminum)
+    	(process slab-milling)
+		(part-material CarbonSteel)
 		(tool-material Carbide)
-		(tool-diameter 2.0)
-		(speed 2000)
-		(feed 0.009)
+		(tool-diameter 10.0)
+		(speed 375)
+		(feed 0.008)
         ))
+
+
+;(provide aes94_mdata)
+
