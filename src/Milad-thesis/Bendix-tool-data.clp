@@ -41,24 +41,6 @@
 )
 
 
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.136)
-		(speed 30)
-		(feed 0.004)
-        ))
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 0.136)
-		(speed 250)
-		(feed 0.004)
-        ))
-
 
 (assert (cutting-condition 	
     	(process drilling)
@@ -81,7 +63,7 @@
     	(process drilling)
 		(part-material CarbonSteel)
 		(tool-material Hss)
-		(tool-diameter 0.785)
+		(tool-diameter 0.750)
 		(speed 30)
 		(feed 0.010)
         ))
@@ -90,100 +72,11 @@
     	(process drilling)
 		(part-material Aluminum)
 		(tool-material Hss)
-		(tool-diameter 0.785)
+		(tool-diameter 0.750)
 		(speed 250)
 		(feed 0.010)
         ))
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.630)
-		(speed 30)
-		(feed 0.010)
-        ))
 
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 0.630)
-		(speed 250)
-		(feed 0.010)
-        ))
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.089)
-		(speed 30)
-		(feed 0.002)
-        ))
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 0.089)
-		(speed 250)
-		(feed 0.002)
-        ))
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.125)
-		(speed 30)
-		(feed 0.004)
-        ))
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 0.125)
-		(speed 250)
-		(feed 0.004)
-        ))
-
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 1.0)
-		(speed 30)
-		(feed 0.017)
-        ))
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 1.0)
-		(speed 250)
-		(feed 0.017)
-        ))
-        
- (assert (cutting-condition 	
-    	(process drilling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 2.5)
-		(speed 30)
-		(feed 0.017)
-        ))
- 
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 2.5)
-		(speed 250)
-		(feed 0.017)
-        ))
-       
 (assert (cutting-condition 	
     	(process drilling)
 		(part-material CarbonSteel)
@@ -202,60 +95,7 @@
 		(feed 0.010)
         ))
 
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 2.25)
-		(speed 30)
-		(feed 0.017)
-        ))
 
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 2.25)
-		(speed 250)
-		(feed 0.017)
-        ))
-
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 2.0)
-		(speed 30)
-		(feed 0.017)
-        ))
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 2.0)
-		(speed 250)
-		(feed 0.017)
-        ))
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 1.5)
-		(speed 30)
-		(feed 0.017)
-        ))
-
-(assert (cutting-condition 	
-    	(process drilling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 1.5)
-		(speed 250)
-		(feed 0.017)
-        ))
  
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Slot ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;        
 
@@ -275,7 +115,7 @@
 	(name T210)
 	(material Hss)
 	(for-process side-milling)
-	(diameter 10.0)
+	(diameter 5.0)
         (width 1.5)
 	(length 10.0)
 	(life-cycle 180)
@@ -283,117 +123,6 @@
 )
 
 
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.625)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 4)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-
-(assert (cutting-condition 	
-    	(process side-milling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.2)
-		(speed 60)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 0.625)
-		(speed 750)
-		(feed 0.03)
-        ))
-
-
-
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.875)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 0.875)
-		(speed 750)
-		(feed 0.03)
-        ))
-
-(assert (cutting-condition 	
-    	(process side-milling)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 5.0)
-		(speed 60)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process side-milling)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 5.0)
-		(speed 750)
-		(feed 0.02)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 2.0)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 2.0)
-		(speed 750)
-		(feed 0.03)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 2.5)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 2.5)
-		(speed 750)
-		(feed 0.03)
-        ))
 
 (assert (cutting-condition 	
     	(process end-milling-slotting)
@@ -401,7 +130,7 @@
 		(tool-material Hss)
 		(tool-diameter 1.5)
 		(speed 70)
-		(feed 0.006)
+		(feed 0.06)
         ))
 
 (assert (cutting-condition 	
@@ -417,109 +146,20 @@
     	(process side-milling)
 		(part-material CarbonSteel)
 		(tool-material Hss)
-		(tool-diameter 10.0)
+		(tool-diameter 5.0)
 		(speed 60)
-		(feed 0.007)
+		(feed 0.07)
         ))
 
 (assert (cutting-condition 	
     	(process side-milling)
 		(part-material Aluminum)
 		(tool-material Hss)
-		(tool-diameter 10.0)
+		(tool-diameter 5.0)
 		(speed 750)
 		(feed 0.02)
         ))
 
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.5)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 0.5)
-		(speed 60)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 2.25)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 2.25)
-		(speed 60)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 6.0)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 6.0)
-		(speed 750)
-		(feed 0.03)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 5.0)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 5.0)
-		(speed 750)
-		(feed 0.03)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 1.0)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-slotting)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 1.0)
-		(speed 750)
-		(feed 0.03)
-        ))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Pocket   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -560,44 +200,7 @@
 		(tool-material Hss)
 		(tool-diameter 1.5)
 		(speed 750)
-		(feed 0.03)
-        ))
-
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 4.4)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 4.4)
-		(speed 750)
-		(feed 0.03)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material CarbonSteel)
-		(tool-material Hss)
-		(tool-diameter 0.5)
-		(speed 70)
-		(feed 0.006)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material Aluminum)
-		(tool-material Hss)
-		(tool-diameter 0.5)
-		(speed 750)
-		(feed 0.02)
+		(feed 0.003)
         ))
 
 (assert (cutting-condition 	
@@ -615,7 +218,7 @@
 		(tool-material Hss)
 		(tool-diameter 2.0)
 		(speed 750)
-		(feed 0.03)
+		(feed 0.003)
         ))
 ;;;;;;;;;------------------------------Tool Carbide ---------------------;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;       Drilling         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1133,64 +736,9 @@
     	(process end-milling-peripheral)
 		(part-material CarbonSteel)
 		(tool-material Carbide)
-		(tool-diameter 1.5)
-		(speed 375)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material Aluminum)
-		(tool-material Carbide)
-		(tool-diameter 1.5)
-		(speed 2000)
-		(feed 0.009)
-        ))
-
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material CarbonSteel)
-		(tool-material Carbide)
-		(tool-diameter 1.0)
-		(speed 375)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material Aluminum)
-		(tool-material Carbide)
-		(tool-diameter 1.0)
-		(speed 2000)
-		(feed 0.009)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material CarbonSteel)
-		(tool-material Carbide)
-		(tool-diameter 0.5)
-		(speed 375)
-		(feed 0.007)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material Aluminum)
-		(tool-material Carbide)
-		(tool-diameter 0.5)
-		(speed 2000)
-		(feed 0.009)
-        ))
-
-(assert (cutting-condition 	
-    	(process end-milling-peripheral)
-		(part-material CarbonSteel)
-		(tool-material Carbide)
 		(tool-diameter 2.0)
 		(speed 375)
-		(feed 0.007)
+		(feed 0.0007)
         ))
 
 (assert (cutting-condition 	
@@ -1198,8 +746,8 @@
 		(part-material Aluminum)
 		(tool-material Carbide)
 		(tool-diameter 2.0)
-		(speed 2000)
-		(feed 0.009)
+		(speed 200)
+		(feed 0.0009)
         ))
 
 

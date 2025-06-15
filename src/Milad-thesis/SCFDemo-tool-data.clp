@@ -66,18 +66,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Slot ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;        
 
 
-; these two are to make slot(15) in nist example they are in MM
-(assert (tool
-	(name T204)
-	(material Hss)
-	(for-process side-milling)
-	(diameter 40)
-        (width 4.0)
-	(length 10.0)
-	(life-cycle 180)
-	(cost 30.000))
-)
-
 (assert (tool
 	(name T205)
 	(material Hss)
@@ -142,7 +130,7 @@
 	(name T218)
 	(material Hss)
 	(for-process side-milling)
-	(diameter 10.0)
+	(diameter 5.0)
         (width 5.0)
 	(length 10)
 	(life-cycle 180)
@@ -175,9 +163,9 @@
     	(process end-milling-slotting)
 		(part-material CarbonSteel)
 		(tool-material Hss)
-		(tool-diameter 4)
+		(tool-diameter 4.0)
 		(speed 70)
-		(feed 0.006)
+		(feed 0.06)
         ))
 
 
@@ -206,7 +194,7 @@
 		(tool-material Hss)
 		(tool-diameter 2.5)
 		(speed 70)
-		(feed 0.006)
+		(feed 0.03)
         ))
 
 (assert (cutting-condition 	
@@ -218,21 +206,29 @@
 		(feed 0.03)
         ))
 
+(assert (cutting-condition 	
+    	(process end-milling-slotting)
+		(part-material CarbonSteel)
+		(tool-material Hss)
+		(tool-diameter 3.0)
+		(speed 70)
+		(feed 0.085)
+        ))
 
 (assert (cutting-condition 	
     	(process side-milling)
 		(part-material CarbonSteel)
 		(tool-material Hss)
-		(tool-diameter 10.0)
+		(tool-diameter 5.0)
 		(speed 60)
-		(feed 0.007)
+		(feed 0.025)
         ))
 
 (assert (cutting-condition 	
     	(process side-milling)
 		(part-material Aluminum)
 		(tool-material Hss)
-		(tool-diameter 10.0)
+		(tool-diameter 5.0)
 		(speed 750)
 		(feed 0.02)
         ))
@@ -243,7 +239,7 @@
 		(tool-material Hss)
 		(tool-diameter 5.0)
 		(speed 70)
-		(feed 0.006)
+		(feed 0.036) ;arbitrary feed value
         ))
 
 (assert (cutting-condition 	

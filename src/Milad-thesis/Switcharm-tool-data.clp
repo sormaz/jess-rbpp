@@ -55,7 +55,7 @@
 		(tool-material Hss)
 		(tool-diameter 2.5)
 		(speed 30)
-		(feed 0.004)
+		(feed 0.025)
         ))
 
 (assert (cutting-condition 	
@@ -64,7 +64,7 @@
 		(tool-material Hss)
 		(tool-diameter 0.75)
 		(speed 30)
-		(feed 0.004)
+		(feed 0.03)
         ))
 
 (assert (cutting-condition 	
@@ -73,7 +73,7 @@
 		(tool-material Hss)
 		(tool-diameter 1.5)
 		(speed 30)
-		(feed 0.004)
+		(feed 0.04)
         ))
 
 (assert (cutting-condition 	
@@ -82,7 +82,7 @@
 		(tool-material Hss)
 		(tool-diameter 0.5)
 		(speed 30)
-		(feed 0.004)
+		(feed 0.04)
         ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Slot ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;        
@@ -172,7 +172,7 @@
 		(tool-material Hss)
 		(tool-diameter 12.0)
 		(speed 750)
-		(feed 0.006)
+		(feed 0.03)
         ))
 
 (assert (cutting-condition 	
@@ -191,11 +191,8 @@
 		(tool-material Hss)
 		(tool-diameter 4.0)
 		(speed 70)
-		(feed 0.006)
+		(feed 0.06)
         ))
-
-
-
 
 
 (assert (cutting-condition 	
@@ -204,7 +201,7 @@
 		(tool-material Hss)
 		(tool-diameter 5.0)
 		(speed 60)
-		(feed 0.007)
+		(feed 0.07)
         ))
 
 (assert (cutting-condition 	
@@ -213,7 +210,7 @@
 		(tool-material Hss)
 		(tool-diameter 5.0)
 		(speed 750)
-		(feed 0.02)
+		(feed 0.05)
         ))
 
 
@@ -222,8 +219,8 @@
 		(part-material CarbonSteel)
 		(tool-material Hss)
 		(tool-diameter 5.0)
-		(speed 70)
-		(feed 0.006)
+		(speed 170)
+		(feed 0.06)
         ))
 
 (assert (cutting-condition 	
