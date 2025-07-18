@@ -1,4 +1,4 @@
-(batch (str-cat ?*ruleFolder* "Milad-thesis/Milad-thesis-cnc-machine-data.clp"))
+(batch (str-cat ?*ruleFolder* "Milad-thesis/Milad-thesis-machine-data-v2.clp"))
 ;(in-package : ops)
 (require rbpp-init)
 
@@ -619,8 +619,8 @@
 		(part-material CarbonSteel)
 		(tool-material Hss)
 		(tool-diameter 5.0)
-		(speed 60)
-		(feed 0.007)
+		(speed 600)
+		(feed 0.07)
         ))
 
 (assert (cutting-condition 	
@@ -691,8 +691,8 @@
 		(part-material CarbonSteel)
 		(tool-material Hss)
 		(tool-diameter 10.0)
-		(speed 60)
-		(feed 0.007)
+		(speed 600)
+		(feed 0.07)
         ))
 
 (assert (cutting-condition 	
@@ -703,6 +703,24 @@
 		(speed 750)
 		(feed 0.02)
         ))
+
+(assert (cutting-condition 	
+    	(process end-milling-slotting)
+		(part-material Aluminum)
+		(tool-material Hss)
+		(tool-diameter 12.5)
+		(speed 800)
+		(feed 0.03)
+        ))
+        
+(assert (cutting-condition 	
+    	(process end-milling-slotting)
+		(part-material CarbonSteel)
+		(tool-material Hss)
+		(tool-diameter 12.5)
+		(speed 800)
+		(feed 0.03)
+        ))        
 
 (assert (cutting-condition 	
     	(process end-milling-slotting)
@@ -745,7 +763,7 @@
 		(part-material CarbonSteel)
 		(tool-material Hss)
 		(tool-diameter 6.0)
-		(speed 70)
+		(speed 700)
 		(feed 0.006)
         ))
 
@@ -1048,8 +1066,8 @@
 		(part-material CarbonSteel)
 		(tool-material Carbide)
 		(tool-diameter 75) ;changed by mayur for ANC101 V4
-		(speed 180)
-		(feed 0.003)
+		(speed 750)
+		(feed 0.06)
         ))
 
 (assert (cutting-condition 	
@@ -1061,14 +1079,22 @@
 		(feed 0.004)
         ))
 
+(assert (cutting-condition 	
+    	(process drilling)
+		(part-material CarbonSteel)
+		(tool-material Carbide)
+		(tool-diameter 65) 
+		(speed 950)
+		(feed 0.09)
+        ))
 
 (assert (cutting-condition 	
     	(process drilling)
 		(part-material CarbonSteel)
 		(tool-material Carbide)
 		(tool-diameter 50) ;changed by mayur for ANC101 V4
-		(speed 180)
-		(feed 0.004)
+		(speed 850)
+		(feed 0.05)
         ))
 
 (assert (cutting-condition 	
@@ -1083,9 +1109,18 @@
     	(process drilling)
 		(part-material CarbonSteel)
 		(tool-material Carbide)
+		(tool-diameter 13) ;changed by mayur for ANC101 V4
+		(speed 950)
+		(feed 0.09)
+        ))   
+        
+(assert (cutting-condition 	
+    	(process drilling)
+		(part-material CarbonSteel)
+		(tool-material Carbide)
 		(tool-diameter 10) ;changed by mayur for ANC101 V4
-		(speed 180)
-		(feed 0.010)
+		(speed 880)
+		(feed 0.06)
         ))
 
 (assert (cutting-condition 	
@@ -1093,9 +1128,19 @@
 		(part-material Aluminum)
 		(tool-material Carbide)
 		(tool-diameter 25) ;changed by mayur for ANC101 V4
-		(speed 300)
+		(speed 600)
 		(feed 0.011)
         ))
+        
+(assert (cutting-condition 	
+    	(process drilling)
+		(part-material CarbonSteel)
+		(tool-material Carbide)
+		(tool-diameter 25) ;changed by mayur for ANC101 V4
+		(speed 980)
+		(feed 0.1)
+        ))
+        
 (assert (cutting-condition 	
     	(process drilling)
 		(part-material CarbonSteel)
@@ -1837,7 +1882,7 @@
 		(part-material CarbonSteel)
 		(tool-material Carbide)
 		(tool-diameter 2.0)
-		(speed 375)
+		(speed 300)
 		(feed 0.007)
         ))
 

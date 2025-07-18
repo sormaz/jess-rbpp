@@ -1,4 +1,4 @@
-(batch (str-cat ?*ruleFolder* "Milad-thesis/Milad-thesis-machine-data.clp"))
+(batch (str-cat ?*ruleFolder* "Milad-thesis/Milad-thesis-machine-data-v2.clp"))
 
 ;(in-package : ops)
 (require rbpp-init)
@@ -738,7 +738,7 @@
 		(tool-material Carbide)
 		(tool-diameter 2.0)
 		(speed 375)
-		(feed 0.0007)
+		(feed 0.007)
         ))
 
 (assert (cutting-condition 	

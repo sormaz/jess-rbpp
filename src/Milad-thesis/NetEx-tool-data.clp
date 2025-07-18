@@ -1,4 +1,4 @@
-(batch (str-cat ?*ruleFolder* "Milad-thesis/Milad-thesis-machine-data.clp"))
+(batch (str-cat ?*ruleFolder* "Milad-thesis/Milad-thesis-machine-data-v2.clp"))
 
 ;(in-package : ops)
 (require rbpp-init)
