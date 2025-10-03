@@ -1,4 +1,4 @@
-(defglobal ?*jess-rbpp-loc* = "C:/Users/sormaz/Documents/GitHub/jess-rbpp/src/")
+(defglobal ?*jess-rbpp-loc* = "C:/Users/dusan/Documents/GitHub/jess-rbpp/src/")
 
 (batch  (str-cat ?*jess-rbpp-loc* "rbpp-init.clp"))
 
